@@ -2248,21 +2248,28 @@ export default function App() {
             element={pub(
               <div className="public-content narrow">
                 <Title eyebrow="ABOUT THE ASSOCIATION" title="Our Vision" />
-                <p className="article-text">
-                  The Maharashtra Olympic Association platform connects
-                  athletes, officials and the sporting community with events,
-                  results and association updates.
-                </p>
-                <div className="panel">
-                  <h2>Excellence. Friendship. Respect.</h2>
-                  <p>
-                    Explore competitions, celebrate sporting achievement, and
-                    find the people supporting sport across Maharashtra.
-                  </p>
-                  <Link className="btn" to="/committee">
-                    Meet the Executive Council
-                  </Link>
-                </div>
+                <section aria-label="Our vision and objectives">
+                  {[
+  "To be the official Organisation in complete and sole charge of Olympic matters in the Maharashtra State.",
+  "To further the cause of the Olympic movement and of amateur sports and to guard and enforce the rules of amateurism.",
+  "To affiliate itself to the Indian Olympic Association and to enforce all rules and regulations of the I.O.A. i.e. to do every Act that may be necessary or expedient to keep the Olympic movement completely independent, autonomous and entirely free from all political, religious or commercial influence.",
+  "To have full and complete jurisdiction over all matters pertaining to the participation of the Maharashtra State, in the national and other games, held under the I.O.A.",
+  "To organize and control in co-operation with State Sports Associations the teams will represent the Maharashtra State, in the National and other Games, held by or under the auspices of the I.O.A.",
+  "To undertake with the assistance of the State Sports Associations concern the financing, management, kitting, transportation, maintenance, and welfare of the teams from the Maharashtra State, taking part in the National and other games, held by or under the auspices of the I.O.A.",
+  "To certify the amateur status of competitors from the Maharashtra State, taking part in such competitions as require certification.",
+  "To encourage and assist in meets between Cities, Universities, Regions, States and Indian and Foreign visiting teams.",
+  "To organize “Maharashtra State Games” as and when feasible.",
+  "To arrange for the holding of the National Games in any city of the Maharashtra State as and when considered desirable.",
+  "To stimulate the interest of the people of the Maharashtra State in the promotion of sports and games in the Olympic programme and to that end assisting for the formation of States Sports Controlling Bodies for items included in the Olympic programme.",
+  "To directly manage if necessary, any games or sports for which there is no existing recognized or affiliated Association.",
+  "To be solely responsible for the Olympic Flag Day collection arrangements in the Maharashtra State.",
+  "To give financial assistance as and when possible to its affiliated members in need of such help.",
+  "To do all such other acts and things generally as are incidental or conducive to the attainment of the above objects or any of them."
+].map((paragraph) => (
+                    <p className="article-text" key={paragraph}>{paragraph}</p>
+                  ))}
+                </section>
+                <Link className="btn" to="/committee">Meet the Executive Council</Link>
               </div>,
             )}
           />
