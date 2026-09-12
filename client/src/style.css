@@ -244,8 +244,7 @@ label.check {
   color: white;
   background:
     linear-gradient(90deg, rgba(5, 23, 49, 0.92), rgba(7, 23, 43, 0.42)),
-    url("/balewadistadium.webp")
-      center/cover;
+    url("/balewadistadium.webp") center/cover;
 }
 .hero h1 {
   font-size: clamp(40px, 5vw, 62px);
@@ -1586,4 +1585,70 @@ dialog::backdrop {
 .brand-symbol img {
   display: block;
   border-radius: 50%;
+}
+/* Keyboard- and touch-accessible public navigation disclosures. */
+.public-header nav {
+  align-items: center;
+}
+.nav-disclosure {
+  position: relative;
+}
+.nav-disclosure-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+.nav-disclosure-trigger.active {
+  color: var(--raw-accent);
+}
+.nav-disclosure-trigger[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+.nav-disclosure-links {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 60;
+  min-width: 220px;
+  padding: 8px;
+  background: var(--raw-panel);
+  border: 1px solid var(--raw-border);
+  border-radius: 10px;
+  box-shadow: 0 8px 28px #0002;
+}
+.nav-disclosure-links[hidden] {
+  display: none;
+}
+.public-header .nav-disclosure-links a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.public-header .nav-disclosure-links a:hover,
+.public-header .nav-disclosure-links a:focus-visible {
+  background: var(--raw-surface);
+}
+@media (max-width: 820px) {
+  .public-header nav.open {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+  .public-header nav.open > a {
+    padding: 9px 0;
+  }
+  .nav-disclosure-trigger {
+    width: 100%;
+    justify-content: space-between;
+    padding: 9px 0;
+  }
+  .nav-disclosure-links {
+    position: static;
+    min-width: 0;
+    margin: 3px 0 10px;
+    box-shadow: none;
+  }
 }

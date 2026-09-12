@@ -14,6 +14,8 @@ export const moduleNames = [
   "circulars",
   "results",
   "committee",
+  "affiliated-members",
+  "associate-members",
   "directory",
   "gallery",
   "athletes",
@@ -25,7 +27,13 @@ export const permissions: Record<Role, readonly string[]> = {
   event_manager: ["events"],
   content_manager: ["news", "circulars", "gallery"],
   results_manager: ["results"],
-  directory_manager: ["committee", "directory", "athletes"],
+  directory_manager: [
+    "committee",
+    "affiliated-members",
+    "associate-members",
+    "directory",
+    "athletes",
+  ],
   viewer: [],
   user: [],
 };
@@ -52,7 +60,21 @@ const common = {
   status: z.enum(["draft", "published", "archived"]).default("draft"),
   imageUrl: url,
 };
+const associationMember = z.object({
+  ...common,
+  designation: short,
+  organization: short,
+  sport: short,
+  district: short,
+  email: z.union([z.literal(""), z.string().email()]).default(""),
+  phone: short,
+  address: short,
+  tenure: short,
+  order: z.coerce.number().int().min(0).default(0),
+});
 export const schemas = {
+  "affiliated-members": associationMember,
+  "associate-members": associationMember,
   events: z
     .object({
       ...common,
@@ -140,12 +162,36 @@ export const labels: Record<ModuleName, string> = {
   news: "News & updates",
   circulars: "Bulletins & circulars",
   results: "Results",
-  committee: "Executive committee",
+  committee: "Executive Council",
+  "affiliated-members": "Affiliated Members",
+  "associate-members": "Associate Members",
   directory: "Directory",
   gallery: "Media gallery",
   athletes: "Athletes",
 };
 export const fields: Record<ModuleName, string[]> = {
+  "affiliated-members": [
+    "organization",
+    "designation",
+    "sport",
+    "district",
+    "email",
+    "phone",
+    "address",
+    "tenure",
+    "order",
+  ],
+  "associate-members": [
+    "organization",
+    "designation",
+    "sport",
+    "district",
+    "email",
+    "phone",
+    "address",
+    "tenure",
+    "order",
+  ],
   events: [
     "sport",
     "venue",

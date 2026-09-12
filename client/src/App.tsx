@@ -22,6 +22,7 @@ import {
   Search,
   Plus,
   ChevronRight,
+  ChevronDown,
   Menu,
   X,
   LogOut,
@@ -60,6 +61,8 @@ const icons: any = {
   circulars: Files,
   results: Trophy,
   committee: Users,
+  "affiliated-members": Users,
+  "associate-members": Users,
   directory: Users,
   gallery: Image,
   athletes: Medal,
@@ -126,11 +129,11 @@ function Logo() {
   return (
     <Link className="brand" to="/">
       <span className="brand-symbol">
-      <img
-        src="/MOALOGO.webp"
-        alt="MOA logo"
-        style={{ width: "100%", height: "100%", objectFit: "contain" }}
-      />
+        <img
+          src="/MOALOGO.webp"
+          alt="MOA logo"
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+        />
       </span>
       <span>
         Maharashtra<span>OLYMPIC ASSOCIATION</span>
@@ -217,6 +220,100 @@ function ProfileMenu() {
     </div>
   );
 }
+function NavigationDropdown({
+  label,
+  items,
+}: {
+  label: string;
+  items: { label: string; to: string }[];
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const location = useLocation();
+  const menuId = "navigation-" + label.toLowerCase();
+  const active = items.some(
+    (item) =>
+      location.pathname === item.to ||
+      location.pathname.startsWith(item.to + "/"),
+  );
+  useEffect(() => setOpen(false), [location]);
+  useEffect(() => {
+    const outside = (event: PointerEvent) => {
+      if (!ref.current?.contains(event.target as Node)) setOpen(false);
+    };
+    document.addEventListener("pointerdown", outside);
+    return () => document.removeEventListener("pointerdown", outside);
+  }, []);
+  return (
+    <div
+      className="nav-disclosure"
+      ref={ref}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node))
+          setOpen(false);
+      }}
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && open) {
+          event.stopPropagation();
+          setOpen(false);
+          trigger.current?.focus();
+        }
+      }}
+    >
+      <button
+        ref={trigger}
+        className={
+          active ? "nav-disclosure-trigger active" : "nav-disclosure-trigger"
+        }
+        aria-expanded={open}
+        aria-controls={menuId}
+        onClick={() => setOpen(!open)}
+      >
+        {label}
+        <ChevronDown size={15} />
+      </button>
+      <div id={menuId} className="nav-disclosure-links" hidden={!open}>
+        {items.map((item) => (
+          <NavLink key={item.to} to={item.to}>
+            {item.label}
+          </NavLink>
+        ))}
+      </div>
+    </div>
+  );
+}
+function AboutDocuments({
+  category,
+}: {
+  category: "Constitution" | "Annual Report";
+}) {
+  const { data, loading, error } = useData("/public/circulars");
+  const documents = data.filter(
+    (item) =>
+      (item.category || "").trim().toLowerCase() === category.toLowerCase(),
+  );
+  return (
+    <main className="public-content">
+      <Title eyebrow="ABOUT THE ASSOCIATION" title={category} />
+      {loading || error ? (
+        <State loading={loading} error={error} empty={false} />
+      ) : documents.length === 0 ? (
+        <section className="panel empty">
+          <Files size={30} />
+          <h2>No documents published yet</h2>
+          <p>{category} documents will appear here when published.</p>
+        </section>
+      ) : (
+        <div className="public-grid">
+          {documents.map((r) => (
+            <ContentCard key={r._id} module="circulars" r={r} />
+          ))}
+        </div>
+      )}
+    </main>
+  );
+}
 function PublicLayout({ children }: { children: React.ReactNode }) {
   const { user } = useApp();
   const [open, setOpen] = useState(false);
@@ -241,11 +338,25 @@ function PublicLayout({ children }: { children: React.ReactNode }) {
           <NavLink to="/" end>
             Home
           </NavLink>
-          <NavLink to="/about">About</NavLink>
+          <NavigationDropdown
+            label="About"
+            items={[
+              { label: "Our Vision", to: "/about/vision" },
+              { label: "Constitution", to: "/about/constitution" },
+              { label: "Annual Report", to: "/about/annual-report" },
+            ]}
+          />
           <NavLink to="/events">Events</NavLink>
           <NavLink to="/results">Results</NavLink>
           <NavLink to="/news">News</NavLink>
-          <NavLink to="/committee">Committee</NavLink>
+          <NavigationDropdown
+            label="Committee"
+            items={[
+              { label: "Executive Council", to: "/committee" },
+              { label: "Affiliated Members", to: "/affiliated-members" },
+              { label: "Associate Members", to: "/associate-members" },
+            ]}
+          />
         </nav>
         {user ? (
           <ProfileMenu />
@@ -454,7 +565,7 @@ function Dashboard() {
           [CalendarDays, "Total events", events],
           [Newspaper, "News articles", news],
           [Trophy, "Results recorded", results],
-          [Users, "Committee members", committee],
+          [Users, "Executive Council members", committee],
         ].map(([Icon, label, d]: any) => (
           <div className="stat" key={label}>
             <div>
@@ -695,7 +806,13 @@ function Editor({
     >
       <form onSubmit={save} className="editor">
         <label>
-          {["committee", "directory", "athletes"].includes(module)
+          {[
+            "committee",
+            "affiliated-members",
+            "associate-members",
+            "directory",
+            "athletes",
+          ].includes(module)
             ? "Full name"
             : "Title"}
           <input
@@ -714,6 +831,12 @@ function Editor({
             onChange={(e) => set("description", e.target.value)}
           />
         </label>
+        {module === "circulars" && (
+          <p className="muted">
+            For About pages, use category “Constitution” or “Annual Report”,
+            attach the PDF, and select Published.
+          </p>
+        )}
         <div className="form-grid">
           {fields[module].map((key) => {
             if (key === "fileUrl")
@@ -951,7 +1074,13 @@ function Manager({ module }: { module: ModuleName }) {
               <thead>
                 <tr>
                   <th>
-                    {["committee", "directory", "athletes"].includes(module)
+                    {[
+                      "committee",
+                      "affiliated-members",
+                      "associate-members",
+                      "directory",
+                      "athletes",
+                    ].includes(module)
                       ? "Name"
                       : "Title"}
                   </th>
@@ -2104,12 +2233,21 @@ export default function App() {
           <Route path="/" element={pub(<Home />)} />
           <Route
             path="/about"
+            element={<Navigate to="/about/vision" replace />}
+          />
+          <Route
+            path="/about/constitution"
+            element={pub(<AboutDocuments category="Constitution" />)}
+          />
+          <Route
+            path="/about/annual-report"
+            element={pub(<AboutDocuments category="Annual Report" />)}
+          />
+          <Route
+            path="/about/vision"
             element={pub(
               <div className="public-content narrow">
-                <Title
-                  eyebrow="ABOUT THE ASSOCIATION"
-                  title="Together, for sport."
-                />
+                <Title eyebrow="ABOUT THE ASSOCIATION" title="Our Vision" />
                 <p className="article-text">
                   The Maharashtra Olympic Association platform connects
                   athletes, officials and the sporting community with events,
@@ -2122,7 +2260,7 @@ export default function App() {
                     find the people supporting sport across Maharashtra.
                   </p>
                   <Link className="btn" to="/committee">
-                    Meet the committee
+                    Meet the Executive Council
                   </Link>
                 </div>
               </div>,
