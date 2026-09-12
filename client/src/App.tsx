@@ -126,7 +126,11 @@ function Logo() {
   return (
     <Link className="brand" to="/">
       <span className="brand-symbol">
-        <Trophy size={25} />
+      <img
+        src="/MOALOGO.webp"
+        alt="MOA logo"
+        style={{ width: "100%", height: "100%", objectFit: "contain" }}
+      />
       </span>
       <span>
         Maharashtra<span>OLYMPIC ASSOCIATION</span>

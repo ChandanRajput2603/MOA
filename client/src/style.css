@@ -244,7 +244,7 @@ label.check {
   color: white;
   background:
     linear-gradient(90deg, rgba(5, 23, 49, 0.92), rgba(7, 23, 43, 0.42)),
-    url("/balewadi-stadium.jpg")
+    url("/balewadistadium.webp")
       center/cover;
 }
 .hero h1 {
@@ -1572,4 +1572,18 @@ dialog::backdrop {
   .public-header .profile-trigger > span:nth-child(2) {
     display: none;
   }
+}
+
+.brand .brand-symbol {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: transparent;
+}
+
+.brand-symbol img {
+  display: block;
+  border-radius: 50%;
 }
