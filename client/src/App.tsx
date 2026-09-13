@@ -1,5 +1,3 @@
-import { HomeMotion } from "./HomeMotion";
-import "./home-motion.css";
 import React, { useEffect, useState, useRef } from "react";
 import {
   Routes,
@@ -1414,14 +1412,14 @@ function Home() {
     news = useData("/public/news"),
     results = useData("/public/results");
   return (
-    <HomeMotion><main className="public-content moa-home">
+    <main className="public-content">
       <div className="hero-grid">
         <section className="hero">
           <div className="eyebrow">THE SPIRIT OF MAHARASHTRA</div>
           <h1>
-            Maharashtra moves.
+            One state.
             <br />
-            Champions rise.
+            Limitless potential.
           </h1>
           <p>
             Celebrating our athletes. Connecting our community.
@@ -1436,7 +1434,7 @@ function Home() {
               Latest results
             </Link>
           </div>
-          <small>AI-generated athlete illustration · Temporary imagery</small>
+          <small>Balewadi Stadium, Pune · Illustrative venue photograph</small>
         </section>
         <section className="hero-side panel">
           <span className="eyebrow">ON THE CALENDAR</span>
@@ -1450,7 +1448,7 @@ function Home() {
           </Link>
         </section>
       </div>
-      <div className="home-ribbon" aria-hidden="true">PASSION. &nbsp; PURPOSE. &nbsp; PERFORMANCE.</div><div className="stats public-stats">
+      <div className="stats public-stats">
         {[
           ["Events", events.data.length],
           ["News & updates", news.data.length],
@@ -1513,7 +1511,18 @@ function Home() {
           View circulars <ArrowUpRight size={17} />
         </Link>
       </div>
-    </main></HomeMotion>
+      <small className="photo-credit">
+        Stadium photograph:{" "}
+        <a href="https://commons.wikimedia.org/wiki/File:Balewadi_Athletics_Stadiums_Interior.jpg">
+          Rdglobetrekker / Wikimedia Commons
+        </a>
+        ,{" "}
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/">
+          CC BY-SA 3.0
+        </a>
+        . Cropped with a dark overlay.
+      </small>
+    </main>
   );
 }
 function Login({ signup = false }: { signup?: boolean }) {
