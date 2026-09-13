@@ -2197,6 +2197,33 @@ function Messages() {
     </>
   );
 }
+function OpeningAnimation() {
+  const [visible, setVisible] = useState(
+    () => !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const dismiss = () => { if (media.matches) setVisible(false); };
+    const timer = window.setTimeout(() => setVisible(false), 1800);
+    media.addEventListener("change", dismiss);
+    return () => {
+      window.clearTimeout(timer);
+      media.removeEventListener("change", dismiss);
+    };
+  }, []);
+  if (!visible) return null;
+  return (
+    <div className="moa-opening" aria-hidden="true">
+      <img src="/MOALOGO.webp" alt="" />
+      <div className="moa-opening-name">
+        <span>Maharashtra</span>
+        <span>Olympic Association</span>
+      </div>
+      <div className="moa-opening-line" />
+    </div>
+  );
+}
+
 export default function App() {
   const { user } = useApp();
   const loc = useLocation();
@@ -2225,6 +2252,7 @@ export default function App() {
   );
   return (
     <>
+      <OpeningAnimation />
       <a className="skip-link" href="#page-content">
         Skip to content
       </a>
