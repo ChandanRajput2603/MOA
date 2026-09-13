@@ -1684,6 +1684,8 @@ dialog::backdrop {
   animation: moa-opening-exit .45s 1.3s ease both;
 }
 .moa-opening img {
+  border-radius: 50%;
+  overflow: hidden;
   width: clamp(90px, 18vw, 140px);
   height: clamp(90px, 18vw, 140px);
   object-fit: contain;

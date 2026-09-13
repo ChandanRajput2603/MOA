@@ -1517,17 +1517,6 @@ function Home() {
           View circulars <ArrowUpRight size={17} />
         </Link>
       </div>
-      <small className="photo-credit">
-        Stadium photograph:{" "}
-        <a href="https://commons.wikimedia.org/wiki/File:Balewadi_Athletics_Stadiums_Interior.jpg">
-          Rdglobetrekker / Wikimedia Commons
-        </a>
-        ,{" "}
-        <a href="https://creativecommons.org/licenses/by-sa/3.0/">
-          CC BY-SA 3.0
-        </a>
-        . Cropped with a dark overlay.
-      </small>
     </main>
   );
 }
