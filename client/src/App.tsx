@@ -125,9 +125,15 @@ function State({
     </div>
   ) : null;
 }
-function Logo() {
+function Logo({ replayOpening = false }: { replayOpening?: boolean }) {
   return (
-    <Link className="brand" to="/">
+    <Link className="brand" to="/" onClick={(event) => {
+      if (replayOpening && !event.defaultPrevented && event.button === 0 &&
+          !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+        window.dispatchEvent(new Event("moa:replay-opening"));
+        window.scrollTo(0, 0);
+      }
+    }}>
       <span className="brand-symbol">
         <img
           src="/MOALOGO.webp"
@@ -326,7 +332,7 @@ function PublicLayout({ children }: { children: React.ReactNode }) {
         <span>Excellence · Friendship · Respect</span>
       </div>
       <header className="public-header">
-        <Logo />
+        <Logo replayOpening />
         <button
           className="mobile-toggle"
           aria-label="Toggle navigation"
@@ -2225,6 +2231,12 @@ function OpeningAnimation() {
 }
 
 export default function App() {
+  const [openingKey, setOpeningKey] = useState(0);
+  useEffect(() => {
+    const replay = () => setOpeningKey((key) => key + 1);
+    window.addEventListener("moa:replay-opening", replay);
+    return () => window.removeEventListener("moa:replay-opening", replay);
+  }, []);
   const { user } = useApp();
   const loc = useLocation();
   useEffect(() => {
@@ -2252,7 +2264,7 @@ export default function App() {
   );
   return (
     <>
-      <OpeningAnimation />
+      <OpeningAnimation key={openingKey} />
       <a className="skip-link" href="#page-content">
         Skip to content
       </a>
