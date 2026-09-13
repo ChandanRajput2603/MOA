@@ -1,3 +1,5 @@
+import { HomeMotion } from "./HomeMotion";
+import "./home-motion.css";
 import React, { useEffect, useState, useRef } from "react";
 import {
   Routes,
@@ -1412,14 +1414,14 @@ function Home() {
     news = useData("/public/news"),
     results = useData("/public/results");
   return (
-    <main className="public-content">
+    <HomeMotion><main className="public-content moa-home">
       <div className="hero-grid">
         <section className="hero">
           <div className="eyebrow">THE SPIRIT OF MAHARASHTRA</div>
           <h1>
-            One state.
+            Maharashtra moves.
             <br />
-            Limitless potential.
+            Champions rise.
           </h1>
           <p>
             Celebrating our athletes. Connecting our community.
@@ -1434,7 +1436,7 @@ function Home() {
               Latest results
             </Link>
           </div>
-          <small>Balewadi Stadium, Pune · Illustrative venue photograph</small>
+          <small>AI-generated athlete illustration · Temporary imagery</small>
         </section>
         <section className="hero-side panel">
           <span className="eyebrow">ON THE CALENDAR</span>
@@ -1448,7 +1450,7 @@ function Home() {
           </Link>
         </section>
       </div>
-      <div className="stats public-stats">
+      <div className="home-ribbon" aria-hidden="true">PASSION. &nbsp; PURPOSE. &nbsp; PERFORMANCE.</div><div className="stats public-stats">
         {[
           ["Events", events.data.length],
           ["News & updates", news.data.length],
@@ -1511,18 +1513,7 @@ function Home() {
           View circulars <ArrowUpRight size={17} />
         </Link>
       </div>
-      <small className="photo-credit">
-        Stadium photograph:{" "}
-        <a href="https://commons.wikimedia.org/wiki/File:Balewadi_Athletics_Stadiums_Interior.jpg">
-          Rdglobetrekker / Wikimedia Commons
-        </a>
-        ,{" "}
-        <a href="https://creativecommons.org/licenses/by-sa/3.0/">
-          CC BY-SA 3.0
-        </a>
-        . Cropped with a dark overlay.
-      </small>
-    </main>
+    </main></HomeMotion>
   );
 }
 function Login({ signup = false }: { signup?: boolean }) {
