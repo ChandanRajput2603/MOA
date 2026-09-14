@@ -1,3 +1,4 @@
+import CinematicHome from "./CinematicHome";
 import React, { useEffect, useState, useRef } from "react";
 import {
   Routes,
@@ -373,7 +374,7 @@ function PublicLayout({ children }: { children: React.ReactNode }) {
         )}
       </header>
       {children}
-      <footer>
+      <footer className={loc.pathname === "/" ? "ch-home-footer" : undefined}>
         <div>
           <Logo />
           <p>Supporting sporting excellence across Maharashtra.</p>
@@ -2259,7 +2260,7 @@ export default function App() {
       </a>
       <div id="page-content">
         <Routes>
-          <Route path="/" element={pub(<Home />)} />
+          <Route path="/" element={pub(<CinematicHome />)} />
           <Route
             path="/about"
             element={<Navigate to="/about/vision" replace />}
