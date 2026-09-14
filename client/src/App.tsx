@@ -57,6 +57,7 @@ import {
   type ModuleName,
 } from "../../shared/modules";
 const icons: any = {
+  sports: Activity,
   events: CalendarDays,
   news: Newspaper,
   circulars: Files,
@@ -972,6 +973,7 @@ function Manager({ module }: { module: ModuleName }) {
       JSON.stringify(r).toLowerCase().includes(q.toLowerCase()) &&
       (status === "all" || r.status === status),
   );
+  if (module === "sports" && sort !== "title") filtered.sort((a, b) => (a.order || 0) - (b.order || 0) || a.title.localeCompare(b.title));
   if (sort === "title") filtered.sort((a, b) => a.title.localeCompare(b.title));
   async function deleteRecord() {
     try {
@@ -1013,7 +1015,7 @@ function Manager({ module }: { module: ModuleName }) {
       <Title
         eyebrow="CONTENT MANAGEMENT"
         title={labels[module]}
-        description="Manage drafts, publish updates, and keep your community informed."
+        description={module === "sports" ? "Add, delete or publish sports. Order 1 appears first and is selected by default; use different order numbers for each sport." : "Manage drafts, publish updates, and keep your community informed."}
         action={
           editable ? (
             <button

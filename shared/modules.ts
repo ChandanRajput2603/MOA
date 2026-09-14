@@ -9,6 +9,7 @@ export const roles = [
   "user",
 ] as const;
 export const moduleNames = [
+  "sports",
   "events",
   "news",
   "circulars",
@@ -73,6 +74,7 @@ const associationMember = z.object({
   order: z.coerce.number().int().min(0).default(0),
 });
 export const schemas = {
+  sports: z.object({ ...common, order: z.coerce.number().int().min(1).default(1) }),
   "affiliated-members": associationMember,
   "associate-members": associationMember,
   events: z
@@ -158,6 +160,7 @@ export const schemas = {
   }),
 };
 export const labels: Record<ModuleName, string> = {
+  sports: "Sports",
   events: "Events & tournaments",
   news: "News & updates",
   circulars: "Bulletins & circulars",
@@ -170,6 +173,7 @@ export const labels: Record<ModuleName, string> = {
   athletes: "Athletes",
 };
 export const fields: Record<ModuleName, string[]> = {
+  sports: ["order"],
   "affiliated-members": [
     "organization",
     "designation",

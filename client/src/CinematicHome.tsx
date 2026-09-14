@@ -1,55 +1,10 @@
+import { sortSports } from "../../shared/sports";
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { api } from './api';
 import './cinematic-home.css';
 type Row = Record<string, any>;
-const sports = [
-  "Football",
-  "Gymnastics",
-  "Handball",
-  "Hockey",
-  "Judo",
-  "Kabaddi",
-  "Taekwondo",
-  "Kayaking & Canoeing",
-  "Archery",
-  "Athletics",
-  "Swimming",
-  "Badminton",
-  "Basketball",
-  "Boxing",
-  "Kho-Kho",
-  "Lawn Tennis",
-  "Rifle",
-  "Rowing",
-  "Volleyball",
-  "Triathlon",
-  "Table Tennis",
-  "Wushu",
-  "Fencing",
-  "Rugby",
-  "Wrestling",
-  "Weightlifting",
-  "Cycling",
-  "Pentathlon",
-  "Netball",
-  "Squash Rackets",
-  "Rollball",
-  "Sepak Takraw",
-  "Atyapatya",
-  "Carrom",
-  "Soft Tennis",
-  "Kurash",
-  "Tenni-Koit",
-  "Mallakhamb",
-  "Softball",
-  "Amateur Gymnastics",
-  "Tug of War",
-  "Bodybuilding",
-  "Ball Badminton",
-  "Thang-Ta"
-];
 const sportKey = (value: string = '') => value.toLowerCase().replace(/[^a-z0-9]/g, '').replace('kabbadi', 'kabaddi').replace('triathalon', 'triathlon').replace('sepakte kraw'.replace(/ /g, ''), 'sepaktakraw');
 const regions = ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Kolhapur', 'Chhatrapati Sambhajinagar'];
 function FeedState({ pending, failed, empty }: { pending: boolean; failed: boolean; empty: boolean }) {
@@ -73,17 +28,21 @@ function NumberReveal({ value }: { value: number }) {
 }
 export default function CinematicHome() {
   const root = useRef<HTMLElement>(null);
-  const [feeds, setFeeds] = useState<Record<string, Row[]>>({events:[], news:[], athletes:[], results:[]});
+  const [feeds, setFeeds] = useState<Record<string, Row[]>>({events:[], news:[], athletes:[], results:[], sports:[]});
   const [pending, setPending] = useState(true);
   const [errors, setErrors] = useState<string[]>([]);
-  const [sport, setSport] = useState('Athletics');
+  const [selectedSport, setSport] = useState('');
+  const sportRecords = sortSports(feeds.sports as (Row & {title: string; order?: number})[]);
+  const sports = sportRecords.map(s => s.title);
+  const sport = sports.includes(selectedSport) ? selectedSport : sports[0] || '';
+  const selectedSportRecord = sportRecords.find(s => s.title === sport);
   const [sportQuery, setSportQuery] = useState('');
   const visibleSports = sports.filter(s => sportKey(s).includes(sportKey(sportQuery)));
   const [champion, setChampion] = useState(0);
   const [region, setRegion] = useState('Pune');
   useEffect(() => {
     let active=true;
-    const names=['events','news','athletes','results'];
+    const names=['events','news','athletes','results','sports'];
     Promise.allSettled(names.map(name=>api.get('/public/'+name))).then(values=> {
       if(!active)return; const next: Record<string,Row[]>={}; const failed:string[]=[];
       values.forEach((v,i)=>{next[names[i]]=v.status==='fulfilled'?v.value.data:[];if(v.status==='rejected')failed.push(names[i]);});
@@ -120,7 +79,7 @@ export default function CinematicHome() {
       <div className="ch-hero-copy"><p className="ch-kicker">ONE STATE. LIMITLESS POTENTIAL.</p><h1 id="ch-title">WHERE<br/>MAHARASHTRA<br/><em>MEETS EXCELLENCE.</em></h1><p className="ch-intro-copy">The ambition of a state.<br/>The spirit of every athlete.</p><Link className="ch-action" to="/events">Enter the action <ArrowUpRight/></Link></div>
       <div className="ch-hero-bottom"><a href="#ch-sports">SCROLL TO EXPLORE <ArrowDown size={16}/></a><span>01 / THE STARTING LINE</span></div>
     </section>
-    <section className="ch-chapter ch-sports" id="ch-sports"><div className="ch-heading"><p className="ch-kicker">02 / FIND YOUR DISCIPLINE</p><h2>SPORTS<br/><em>IN MOTION.</em></h2></div><div className="ch-sport-stage"><div className="ch-sport-browser"><label htmlFor="ch-sport-search">Find your sport</label><input id="ch-sport-search" type="search" placeholder="Search all sports…" value={sportQuery} onChange={e=>setSportQuery(e.target.value)}/><p className="ch-sport-count" role="status">{visibleSports.length} of {sports.length} sports</p><div className="ch-sport-menu" aria-label="Select a sport">{visibleSports.map(s=><button key={s} aria-pressed={s===sport} onClick={()=>setSport(s)}><small>{String(sports.indexOf(s)+1).padStart(2,'0')}</small><span>{s}</span><ArrowUpRight size={20}/></button>)}</div>{!visibleSports.length&&<p>No matching sports. Try another name.</p>}</div><div className="ch-sport-visual" key={sport}>{sportAthlete?<img src={sportAthlete.imageUrl} alt={sportAthlete.title} loading="lazy"/>:<div className="ch-track-art" aria-hidden="true"><i/><i/><i/><i/><i/></div>}<div className="ch-sport-caption"><span>FOCUS / {sport.toUpperCase()}</span><h3>{sport}</h3><p>{pending?'Loading events…':errors.includes('events')?'Event updates currently unavailable.':`${sportEvents.length} published events`}</p><Link to="/events">Explore the event calendar <ArrowUpRight size={18}/></Link></div></div></div></section>
+    <section className="ch-chapter ch-sports" id="ch-sports"><div className="ch-heading"><p className="ch-kicker">02 / FIND YOUR DISCIPLINE</p><h2>SPORTS<br/><em>IN MOTION.</em></h2></div>{state('sports')}<div className="ch-sport-stage"><div className="ch-sport-browser"><label htmlFor="ch-sport-search">Find your sport</label><input id="ch-sport-search" type="search" placeholder="Search all sports…" value={sportQuery} onChange={e=>setSportQuery(e.target.value)}/><p className="ch-sport-count" role="status">{visibleSports.length} of {sports.length} sports</p><div className="ch-sport-menu" aria-label="Select a sport">{visibleSports.map(s=><button key={s} aria-pressed={s===sport} onClick={()=>setSport(s)}><small>{String(sports.indexOf(s)+1).padStart(2,'0')}</small><span>{s}</span><ArrowUpRight size={20}/></button>)}</div>{sports.length>0&&!visibleSports.length&&<p>No matching sports. Try another name.</p>}</div>{sport&&<div className="ch-sport-visual" key={sport}>{selectedSportRecord?.imageUrl?<img src={selectedSportRecord.imageUrl} alt={sport} loading="lazy"/>:sportAthlete?<img src={sportAthlete.imageUrl} alt={sportAthlete.title} loading="lazy"/>:<div className="ch-track-art" aria-hidden="true"><i/><i/><i/><i/><i/></div>}<div className="ch-sport-caption"><span>FOCUS / {sport.toUpperCase()}</span><h3>{sport}</h3><p>{pending?'Loading events…':errors.includes('events')?'Event updates currently unavailable.':`${sportEvents.length} published events`}</p><Link to="/events">Explore the event calendar <ArrowUpRight size={18}/></Link></div></div>}</div></section>
     <section className="ch-chapter ch-events"><div className="ch-section-top"><div><p className="ch-kicker">03 / ON THE CALENDAR</p><h2>THE NEXT<br/><em>BIG MOMENT.</em></h2></div><Link to="/events">All events <ArrowUpRight/></Link></div>{state('events',events)}<div className="ch-event-list">{events.slice(0,3).map((e,i)=><Link className="ch-event" to={'/events/'+e._id} key={e._id}><span className="ch-event-index">0{i+1}</span><div><span className="ch-kicker">{e.eventStatus} / {e.sport||'SPORT'}</span><h3>{e.title}</h3><p>{[e.venue,e.city].filter(Boolean).join(' · ')||'Venue to be announced'}</p></div><div className="ch-event-date">{e.startDate||'Date to be announced'}<ArrowUpRight/></div></Link>)}</div></section>
     <section className="ch-chapter ch-champions"><p className="ch-kicker">04 / THE PEOPLE BEHIND THE PERFORMANCE</p><h2>THE <em>CHAMPIONS.</em></h2>{state('athletes')}{athlete?<div className="ch-athlete" key={athlete._id}><div className="ch-athlete-photo">{athlete.imageUrl?<img src={athlete.imageUrl} alt={athlete.title} loading="lazy"/>:<div className="ch-monogram" aria-hidden="true">MOA</div>}</div><div className="ch-athlete-story"><p className="ch-kicker">{athlete.sport} · {athlete.district||'MAHARASHTRA'}</p><h3>{athlete.title}</h3><p>{athlete.achievements||athlete.description||'Discover this athlete’s journey.'}</p><Link className="ch-action" to={'/athletes/'+athlete._id}>Discover the athlete <ArrowUpRight/></Link></div></div>:<div className="ch-champion-empty"><span>EVERY JOURNEY<br/>STARTS WITH <em>BELIEF.</em></span><Link to="/athletes">Explore our athletes <ArrowUpRight/></Link></div>}{athletes.length>1&&<div className="ch-controls"><button aria-label="Previous athlete" onClick={()=>setChampion((champion+athletes.length-1)%athletes.length)}><ChevronLeft/></button><span>{champion%athletes.length+1} / {athletes.length}</span><button aria-label="Next athlete" onClick={()=>setChampion((champion+1)%athletes.length)}><ChevronRight/></button></div>}</section>
     <section className="ch-chapter ch-medals"><div><p className="ch-kicker">05 / EVERY FINISH TELLS A STORY</p><h2>PRIDE.<br/>IN EVERY<br/><em>PERFORMANCE.</em></h2><Link to="/medals">Explore the medal tally <ArrowUpRight/></Link></div><div className="ch-medal-board">{['Gold','Silver','Bronze'].map((m,i)=><div className={'ch-medal-row ch-metal-'+i} key={m}><div className="ch-medal" aria-hidden="true"><span>{i+1}</span></div><span>{m.toUpperCase()}</span><strong>{pending||errors.includes('results')?'—':<NumberReveal value={feeds.results.filter(r=>r.medal===m).length}/>}</strong></div>)}<p>Medals from published results</p></div></section>
