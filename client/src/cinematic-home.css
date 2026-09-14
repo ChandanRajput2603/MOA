@@ -50,3 +50,29 @@
   .ch-typing-hidden { visibility: visible; }
 }
 [data-motion=reduced] .ch-typing-hidden { visibility: visible; }
+
+/* Rotate the old sport away, swap at the edge, then reveal the new face. */
+.cinematic-home .ch-sport-visual {
+  transform: perspective(1100px) rotateY(0deg);
+  backface-visibility: hidden;
+  transform-origin: center center;
+  animation: none;
+}
+.cinematic-home .ch-sport-visual.ch-flip-out {
+  animation: ch-sport-flip-out 220ms ease-in both;
+}
+.cinematic-home .ch-sport-visual.ch-flip-in {
+  animation: ch-sport-flip-in 300ms ease-out both;
+}
+@keyframes ch-sport-flip-out {
+  from { transform: perspective(1100px) rotateY(0deg); }
+  to { transform: perspective(1100px) rotateY(90deg); }
+}
+@keyframes ch-sport-flip-in {
+  from { transform: perspective(1100px) rotateY(-90deg); }
+  to { transform: perspective(1100px) rotateY(0deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-home .ch-sport-visual { animation: none !important; transform: none; }
+}
+[data-motion=reduced] .cinematic-home .ch-sport-visual { animation: none !important; transform: none; }
