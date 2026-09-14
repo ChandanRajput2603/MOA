@@ -69,7 +69,6 @@ export default function CinematicHome() {
   return <main ref={root} className="cinematic-home">
     <section className="ch-hero" aria-labelledby="ch-title">
       <div className="ch-stadium" aria-hidden="true"><div className="ch-orbit"/><div className="ch-orbit ch-orbit-two"/><div className="ch-beam"/>{Array.from({length:18},(_,i)=><i key={i} style={{left:`${(i*37)%100}%`,top:`${(i*23)%100}%`,animationDelay:`-${i*.8}s`}}/>)}</div>
-      <div className="ch-hero-top"><span>MAHARASHTRA OLYMPIC ASSOCIATION</span><span>EXCELLENCE · FRIENDSHIP · RESPECT</span></div>
       <div className="ch-hero-copy"><p className="ch-kicker">ONE STATE. LIMITLESS POTENTIAL.</p><h1 id="ch-title">WHERE<br/>MAHARASHTRA<br/><em>MEETS EXCELLENCE.</em></h1><p className="ch-intro-copy">The ambition of a state.<br/>The spirit of every athlete.</p><Link className="ch-action" to="/events">Enter the action <ArrowUpRight/></Link></div>
       <div className="ch-hero-bottom"><a href="#ch-sports">SCROLL TO EXPLORE <ArrowDown size={16}/></a><span>01 / THE STARTING LINE</span></div>
     </section>
