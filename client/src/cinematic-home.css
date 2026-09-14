@@ -11,3 +11,19 @@
 [data-motion=reduced] .cinematic-home *,[data-motion=reduced] .cinematic-home *:before,[data-motion=reduced] .cinematic-home *:after{animation:none!important;transition:none!important}[data-motion=reduced] .ch-reveal{opacity:1;transform:none}[data-motion=reduced] .ch-stadium{transform:none}
 
 .cinematic-home .ch-hero-copy > .ch-kicker { margin-top: 0; }
+
+/* Full sport directory: keep the visual alongside a compact searchable list. */
+.cinematic-home .ch-sport-stage { align-items: start; }
+.cinematic-home .ch-sport-browser { min-width: 0; }
+.cinematic-home .ch-sport-browser label { display: block; font-size: 13px; margin-bottom: 8px; }
+.cinematic-home .ch-sport-browser input { width: 100%; background: var(--ch-panel); color: var(--ch-ink); border: 1px solid var(--ch-line); border-radius: 0; padding: 12px 14px; }
+.cinematic-home .ch-sport-browser input::placeholder { color: var(--ch-muted); opacity: 1; }
+.cinematic-home .ch-sport-count { font-size: 12px; margin: 10px 0; }
+.cinematic-home .ch-sport-menu { max-height: 430px; overflow-y: auto; scrollbar-gutter: stable; padding-right: 8px; }
+.cinematic-home .ch-sport-menu button { flex-shrink: 0; font-size: clamp(20px, 2.2vw, 30px); }
+.cinematic-home .ch-sport-menu button span { overflow-wrap: anywhere; }
+.cinematic-home .ch-sport-menu button svg { flex-shrink: 0; }
+@media (max-width: 800px) {
+  .cinematic-home .ch-sport-menu { display: flex; max-height: 300px; }
+  .cinematic-home .ch-sport-menu button { font-size: 20px; }
+}
