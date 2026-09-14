@@ -1,3 +1,4 @@
+import SportImageField from "./SportImageField";
 import CinematicHome from "./CinematicHome";
 import React, { useEffect, useState, useRef } from "react";
 import {
@@ -784,11 +785,13 @@ function Editor({
   const [form, setForm] = useState<any>({ ...record }),
     [busy, setBusy] = useState(false),
     [error, setError] = useState("");
+  const [imagePending, setImagePending] = useState(false);
   const set = (key: string, value: any) =>
     setForm((f: any) => ({ ...f, [key]: value }));
   const { notify } = useApp();
   async function save(e: React.FormEvent) {
     e.preventDefault();
+    if (imagePending) { setError("Finish or cancel the image crop before saving."); return; }
     setBusy(true);
     try {
       const body = { ...form };
@@ -915,10 +918,10 @@ function Editor({
               </label>
             );
           })}
-          <UploadField
+          {module === "sports" ? <SportImageField value={form.imageUrl} onChange={(v) => set("imageUrl", v)} onPending={setImagePending} /> : <UploadField
             value={form.imageUrl}
             onChange={(v) => set("imageUrl", v)}
-          />
+          />}
           <label>
             Visibility
             <select
@@ -940,7 +943,7 @@ function Editor({
           <button type="button" className="btn outline" onClick={onClose}>
             Cancel
           </button>
-          <button disabled={busy} className="btn">
+          <button disabled={busy || imagePending} className="btn">
             {busy ? "Saving…" : "Save changes"}
           </button>
         </div>
