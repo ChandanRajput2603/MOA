@@ -1729,3 +1729,59 @@ dialog::backdrop {
   .moa-opening { display: none; animation: none; }
   .moa-opening * { animation: none; }
 }
+
+/* Executive Council: sports portrait cards, isolated from other content cards. */
+.council-card {
+  --council-accent: #b8440b;
+  min-width:0; display:flex; flex-direction:column; position:relative;
+  border:1px solid var(--raw-border); border-radius:22px; overflow:hidden;
+  background:var(--raw-panel); box-shadow:0 8px 25px #0b1d3010;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+[data-theme=dark] .council-card { --council-accent:#ffad72; }
+.council-card:hover,.council-card:focus-within {
+  transform:translateY(-5px); box-shadow:0 18px 40px #0b1d3026;
+}
+.council-card-portrait { position:relative; aspect-ratio:1; background:var(--raw-surface); overflow:hidden; }
+.council-card-portrait>img { display:block; width:100%; height:100%; object-fit:contain; }
+.council-card-portrait:after {
+  content:""; position:absolute; bottom:0; left:0; width:100%; height:6px;
+  background:linear-gradient(110deg,#ef722d 0 68%,#142c41 68% 80%,#f2af5d 80%);
+}
+.council-card-mark {
+  position:absolute; top:16px; left:16px; background:#102635; color:#fff;
+  padding:9px 12px; font-weight:850; font-size:19px; line-height:1;
+  border-radius:5px 14px 5px 5px; box-shadow:0 4px 14px #0002;
+}
+.council-card-mark>span { display:block; margin-top:5px; font-size:7px; letter-spacing:.19em; }
+.council-card-tenure {
+  position:absolute; right:16px; top:16px; padding:7px 10px;
+  border-radius:100px; background:#102635; color:#fff;
+  font-size:11px; font-weight:650; letter-spacing:.05em;
+}
+.council-card-placeholder {
+  height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;
+  background:repeating-radial-gradient(ellipse at 130% 110%,transparent 0 28px,#ffffff20 29px 30px,transparent 31px 55px),linear-gradient(135deg,#102635,#244958);
+  color:#fff; padding:55px 24px;
+}
+.council-card-placeholder>span { font-weight:850; font-size:clamp(60px,7vw,100px); line-height:1; letter-spacing:-.07em; }
+.council-card-placeholder>small { font-size:9px; text-align:center; letter-spacing:.16em; max-width:180px; line-height:1.7; }
+.council-card-body { padding:24px; display:flex; flex:1; flex-direction:column; }
+.council-card .council-card-role {
+  color:var(--council-accent); text-transform:uppercase; letter-spacing:.12em; font-size:11px;
+  font-weight:800; margin:0 0 12px; display:flex; align-items:center; gap:9px;
+}
+.council-card-role:before { content:""; width:18px; height:3px; background:currentColor; flex-shrink:0; transform:skewX(-25deg); }
+.council-card h3 { font-size:clamp(23px,2.2vw,30px); line-height:1.12; letter-spacing:-.04em; margin:0 0 26px; overflow-wrap:anywhere; }
+.council-card-bottom {
+  margin-top:auto; padding-top:17px; border-top:1px solid var(--raw-border);
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;
+}
+.council-card-bottom>span { font-size:8px; letter-spacing:.12em; color:var(--raw-muted); }
+.council-card-bottom>a { display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:750; }
+.council-card-bottom svg { color:var(--council-accent); transition:transform .25s; }
+.council-card-bottom>a:hover svg { transform:translate(2px,-2px); }
+.council-card a:focus-visible { outline:3px solid var(--council-accent); outline-offset:4px; }
+@media(max-width:600px) { .council-card-body { padding:20px; } }
+@media(prefers-reduced-motion:reduce) { .council-card,.council-card-bottom svg { transition:none; transform:none!important; } }
+[data-motion=reduced] .council-card,[data-motion=reduced] .council-card-bottom svg { transition:none; transform:none!important; }

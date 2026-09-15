@@ -1273,7 +1273,30 @@ function PublicList({ module }: { module: ModuleName }) {
     </div>
   );
 }
+function CouncilCard({ member }: { member: any }) {
+  const [photoFailed, setPhotoFailed] = useState(false);
+  useEffect(() => setPhotoFailed(false), [member.imageUrl]);
+  const initials = String(member.title || "MOA").replace(/^(?:(?:Mr|Ms|Mrs|Shri|Dr|Adv)\.?\s*)+/i, "").split(/\s+/).filter(Boolean).slice(0, 2).map(word => word[0]).join("");
+  return <article className="council-card">
+    <div className="council-card-portrait">
+      {member.imageUrl && !photoFailed
+        ? <img src={member.imageUrl} alt={member.title} loading="lazy" onError={() => setPhotoFailed(true)} />
+        : <div className="council-card-placeholder" aria-label="Member photograph not available"><span aria-hidden="true">{initials}</span><small>MAHARASHTRA OLYMPIC ASSOCIATION</small></div>}
+      <span className="council-card-mark" aria-hidden="true">MOA<span>COUNCIL</span></span>
+      {member.tenure && <span className="council-card-tenure">{member.tenure}</span>}
+    </div>
+    <div className="council-card-body">
+      <p className="council-card-role">{member.designation || "Executive Council"}</p>
+      <h3><Link to={"/committee/" + member._id}>{member.title}</Link></h3>
+      <div className="council-card-bottom">
+        <span>EXECUTIVE COUNCIL</span>
+        <Link to={"/committee/" + member._id} aria-label={"View profile of " + member.title}>View profile <ArrowUpRight size={19}/></Link>
+      </div>
+    </div>
+  </article>;
+}
 function ContentCard({ module, r }: { module: ModuleName; r: any }) {
+  if (module === "committee") return <CouncilCard member={r} />;
   const Icon = icons[module];
   return (
     <article className="content-card">
