@@ -1273,7 +1273,9 @@ function PublicList({ module }: { module: ModuleName }) {
     </div>
   );
 }
-function CouncilCard({ member }: { member: any }) {
+function CouncilCard({ member, module }: { member: any; module: "committee" | "affiliated-members" }) {
+  const section = module === "committee" ? "Executive Council" : "Affiliated Members";
+  const profileUrl = "/" + module + "/" + member._id;
   const [photoFailed, setPhotoFailed] = useState(false);
   useEffect(() => setPhotoFailed(false), [member.imageUrl]);
   const initials = String(member.title || "MOA").replace(/^(?:(?:Mr|Ms|Mrs|Shri|Dr|Adv)\.?\s*)+/i, "").split(/\s+/).filter(Boolean).slice(0, 2).map(word => word[0]).join("");
@@ -1282,21 +1284,22 @@ function CouncilCard({ member }: { member: any }) {
       {member.imageUrl && !photoFailed
         ? <img src={member.imageUrl} alt={member.title} loading="lazy" onError={() => setPhotoFailed(true)} />
         : <div className="council-card-placeholder" aria-label="Member photograph not available"><span aria-hidden="true">{initials}</span><small>MAHARASHTRA OLYMPIC ASSOCIATION</small></div>}
-      <span className="council-card-mark" aria-hidden="true">MOA<span>COUNCIL</span></span>
+      <span className="council-card-mark" aria-hidden="true">MOA<span>{module === "committee" ? "COUNCIL" : "AFFILIATED"}</span></span>
       {member.tenure && <span className="council-card-tenure">{member.tenure}</span>}
     </div>
     <div className="council-card-body">
-      <p className="council-card-role">{member.designation || "Executive Council"}</p>
-      <h3><Link to={"/committee/" + member._id}>{member.title}</Link></h3>
+      <p className="council-card-role">{member.designation || section}</p>
+      <h3><Link to={profileUrl}>{member.title}</Link></h3>
+      {module === "affiliated-members" && member.organization && <p style={{margin: "-12px 0 22px", fontSize: 13, lineHeight: 1.5, overflowWrap: "anywhere"}}>{member.organization}</p>}
       <div className="council-card-bottom">
-        <span>EXECUTIVE COUNCIL</span>
-        <Link to={"/committee/" + member._id} aria-label={"View profile of " + member.title}>View profile <ArrowUpRight size={19}/></Link>
+        <span>{section.toUpperCase()}</span>
+        <Link to={profileUrl} aria-label={"View profile of " + member.title}>View profile <ArrowUpRight size={19}/></Link>
       </div>
     </div>
   </article>;
 }
 function ContentCard({ module, r }: { module: ModuleName; r: any }) {
-  if (module === "committee") return <CouncilCard member={r} />;
+  if (module === "committee" || module === "affiliated-members") return <CouncilCard member={r} module={module} />;
   const Icon = icons[module];
   return (
     <article className="content-card">
