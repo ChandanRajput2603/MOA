@@ -76,3 +76,83 @@
   .cinematic-home .ch-sport-visual { animation: none !important; transform: none; }
 }
 [data-motion=reduced] .cinematic-home .ch-sport-visual { animation: none !important; transform: none; }
+
+/* Homepage experience: editorial sports imagery, track details and strong rhythm. */
+.cinematic-home { --ch-accent:#b44310; --ch-panel:#eae7df; }
+[data-theme=dark] .cinematic-home { --ch-accent:#ffac6a; --ch-panel:#172029; }
+.cinematic-home .ch-hero { min-height:calc(100svh - 110px); padding-top:12px; }
+.cinematic-home .ch-hero-copy { z-index:2; padding-bottom:44px; pointer-events:none; }
+.cinematic-home .ch-hero-copy a { pointer-events:auto; }
+.cinematic-home .ch-hero h1 { font-size:clamp(46px,7.5vw,112px); max-width:86%; text-shadow:0 2px 25px var(--ch-bg); }
+.cinematic-home .ch-hero h1 em { font-size:.58em; }
+.ch-hero-portrait { position:absolute; z-index:1; right:5%; top:18px; bottom:100px; width:42%; margin:0; overflow:hidden; border-radius:120px 22px 22px 22px; background:#172029; isolation:isolate; }
+.ch-hero-portrait:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 30%,#071017e8); pointer-events:none; }
+.ch-hero-portrait img { width:100%; height:100%; object-fit:cover; object-position:center; animation:ch-photo-arrive 1.4s cubic-bezier(.2,.7,.2,1) both; }
+.ch-hero-portrait figcaption { position:absolute; bottom:26px; left:28px; right:28px; z-index:2; display:grid; gap:12px; color:#fff; }
+.ch-hero-portrait figcaption span:first-child { font-size:10px; letter-spacing:.2em; }
+.ch-hero-portrait figcaption span:last-child { font-size:clamp(22px,2.5vw,38px); line-height:1.05; font-weight:800; letter-spacing:-.04em; }
+.ch-image-index { position:absolute; right:20px; top:15px; color:#fff; font-size:64px; font-weight:800; opacity:.75; }
+.cinematic-home .ch-hero-bottom { z-index:3; }
+.cinematic-home .ch-intro-copy { max-width:40%; }
+.cinematic-home .ch-action { border-radius:100px; padding:17px 24px; }
+.ch-action svg { transition:transform .25s ease; }
+.ch-action:hover svg { transform:translate(3px,-3px); }
+.ch-rally-strip { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:24px 6%; background:#ea6126; color:#171b20; }
+.ch-rally-strip>span { font-size:clamp(20px,3.6vw,52px); font-weight:850; letter-spacing:-.04em; line-height:1; }
+.ch-rally-strip>a { font-size:11px; font-weight:800; letter-spacing:.1em; }
+.cinematic-home .ch-chapter { position:relative; padding-top:100px; padding-bottom:100px; }
+.cinematic-home .ch-kicker { display:flex; gap:10px; align-items:center; }
+.cinematic-home .ch-kicker:before { content:""; width:6px; height:6px; border-radius:50%; flex-shrink:0; background:currentColor; }
+.cinematic-home .ch-sport-browser input { border-radius:12px; }
+.cinematic-home .ch-sport-menu button:hover { color:var(--ch-accent); }
+.cinematic-home .ch-sport-visual { box-shadow:0 22px 50px #0002; }
+.cinematic-home .ch-events { border-radius:36px 36px 0 0; }
+.cinematic-home .ch-event { position:relative; border-radius:14px; padding-left:18px; padding-right:18px; }
+.cinematic-home .ch-event:hover { background:var(--ch-bg); padding-left:25px; }
+.ch-event-thumbnail { width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+.cinematic-home .ch-event:has(.ch-event-thumbnail) { grid-template-columns:40px 140px 1fr 180px; }
+.cinematic-home .ch-athlete-photo { border-radius:24px; overflow:hidden; }
+.cinematic-home .ch-athlete-photo img { display:block; }
+.cinematic-home .ch-controls button { border-radius:50%; transition:background .2s; }
+.cinematic-home .ch-controls button:hover { background:var(--ch-panel); }
+.cinematic-home .ch-medal-board { padding:12px 30px 24px; border:1px solid var(--ch-line); border-radius:24px; background:var(--ch-bg); }
+.cinematic-home .ch-regions { background-image:repeating-radial-gradient(ellipse at 100% 100%,transparent 0 45px,var(--ch-line) 46px 47px,transparent 48px 90px); }
+.cinematic-home .ch-region-controls button { border-radius:100px; background:var(--ch-bg); }
+.cinematic-home .ch-region-result { border-radius:20px; max-width:760px; }
+.cinematic-home .ch-result-row { transition:background .2s; }
+.cinematic-home .ch-result-row:hover { background:var(--ch-panel); }
+.cinematic-home .ch-news-grid>a { border-top:0; border-radius:20px; overflow:hidden; background:var(--ch-bg); padding:0 22px 22px; transition:transform .3s; }
+.cinematic-home .ch-news-grid>a:hover { transform:translateY(-6px); }
+.cinematic-home .ch-news-grid img { width:calc(100% + 44px); max-width:none; margin-left:-22px; }
+.cinematic-home .ch-news-grid .ch-kicker { margin-top:24px; }
+.cinematic-home .ch-closing { background:#111e28; color:#f8f5ed; overflow:hidden; isolation:isolate; }
+.cinematic-home .ch-closing:after { content:""; position:absolute; width:65vw; height:65vw; border:2px solid #ffac6a60; border-radius:50%; right:-30vw; top:20%; box-shadow:0 0 0 35px #ffac6a18,0 0 0 70px #ffac6a18,0 0 0 105px #ffac6a18; z-index:-1; }
+.cinematic-home .ch-closing em,.cinematic-home .ch-closing .ch-kicker { color:#ffac6a; }
+.cinematic-home .ch-closing .ch-action { background:#ea6126; color:#171b20; }
+.cinematic-home :is(a,button,input,select):focus-visible { outline:3px solid var(--ch-accent); outline-offset:5px; }
+@keyframes ch-photo-arrive { from { opacity:0; transform:scale(1.1); } to { opacity:1; transform:scale(1); } }
+@media(max-width:1000px) {
+ .cinematic-home .ch-event:has(.ch-event-thumbnail) { grid-template-columns:30px 95px 1fr; }
+ .ch-event:has(.ch-event-thumbnail) .ch-event-date { grid-column:3; }
+ .ch-rally-strip>a { max-width:160px; }
+}
+@media(max-width:800px) {
+ .cinematic-home .ch-hero { min-height:auto; padding-bottom:24px; }
+ .cinematic-home .ch-hero-copy { padding-bottom:26px; }
+ .cinematic-home .ch-hero h1 { max-width:100%; font-size:clamp(38px,9vw,68px); }
+ .cinematic-home .ch-intro-copy { max-width:100%; margin-top:20px; }
+ .ch-hero-portrait { position:relative; order:2; top:auto; bottom:auto; right:auto; width:100%; height:330px; margin:0 0 28px; border-radius:60px 18px 18px 18px; }
+ .ch-hero-bottom { order:3; }
+ .ch-hero-portrait figcaption span:last-child { font-size:28px; }
+ .ch-rally-strip { flex-wrap:wrap; gap:16px; padding:22px 6%; }
+ .ch-rally-strip>span { font-size:24px; }
+ .ch-rally-strip>span:nth-child(4) { display:none; }
+ .ch-rally-strip>a { max-width:none; width:100%; }
+ .cinematic-home .ch-chapter { padding-top:65px; padding-bottom:65px; }
+ .cinematic-home .ch-event:has(.ch-event-thumbnail) { grid-template-columns:25px 70px 1fr; gap:12px; }
+ .cinematic-home .ch-event { padding-left:0; padding-right:0; }
+ .cinematic-home .ch-event:hover { padding-left:0; }
+ .cinematic-home .ch-medal-board { padding:8px 18px 20px; }
+}
+@media(prefers-reduced-motion:reduce) { .ch-hero-portrait img { animation:none; } }
+[data-motion=reduced] .ch-hero-portrait img { animation:none; }
