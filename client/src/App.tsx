@@ -745,6 +745,10 @@ function UploadField({
       setBusy(false);
     }
   }
+  if(label !== "PDF document") return <div>
+    <SportImageField value={value} onChange={onChange} label={label === "Image or PDF" ? "Image" : label} aspect={label === "Profile photograph" ? 1 : 4/3} circular={label === "Profile photograph"} />
+    {label === "Image or PDF" && <label>Or upload PDF<input type="file" accept="application/pdf" disabled={busy} onChange={e=>{upload(e.target.files?.[0]);e.target.value="";}} />{busy && <small>Uploading…</small>}</label>}
+  </div>;
   return (
     <label>
       {label}
@@ -918,10 +922,7 @@ function Editor({
               </label>
             );
           })}
-          {module === "sports" ? <SportImageField value={form.imageUrl} onChange={(v) => set("imageUrl", v)} onPending={setImagePending} /> : <UploadField
-            value={form.imageUrl}
-            onChange={(v) => set("imageUrl", v)}
-          />}
+          <SportImageField value={form.imageUrl} onChange={(v) => set("imageUrl", v)} onPending={setImagePending} aspect={["committee","affiliated-members","associate-members","directory","athletes"].includes(module) ? 1 : 4/3} />
           <label>
             Visibility
             <select
@@ -1277,7 +1278,7 @@ function ContentCard({ module, r }: { module: ModuleName; r: any }) {
   return (
     <article className="content-card">
       {r.imageUrl ? (
-        <img className="card-image" src={r.imageUrl} alt={r.title} />
+        <img className="card-image" style={{height: "auto", aspectRatio: ["committee","affiliated-members","associate-members","directory","athletes"].includes(module) ? "1" : "4 / 3"}} src={r.imageUrl} alt={r.title} />
       ) : (
         <div className="card-icon">
           <Icon size={30} />
