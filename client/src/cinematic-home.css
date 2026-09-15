@@ -115,3 +115,33 @@
 }
 @media(prefers-reduced-motion:reduce) { .ch-leader { transition:none!important; transform:none!important; } }
 [data-motion=reduced] .ch-leader { transition:none!important; transform:none!important; }
+
+/* A slow light sweep confined to the two opening headline lines. */
+.ch-title-shine { color:var(--ch-ink); }
+@supports ((background-clip:text) or (-webkit-background-clip:text)) {
+  .ch-title-shine {
+    display:inline-block;
+    background-image:linear-gradient(110deg,var(--ch-ink) 0%,var(--ch-ink) 42%,var(--ch-accent) 49%,var(--ch-ink) 56%,var(--ch-ink) 100%);
+    background-size:250% 100%;
+    background-position:100% 50%;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+    animation:ch-title-light 6s ease-in-out infinite;
+  }
+  [data-theme=dark] .ch-title-shine {
+    background-image:linear-gradient(110deg,var(--ch-ink) 0%,var(--ch-ink) 42%,#ffce9b 48%,#fff 50%,var(--ch-ink) 56%,var(--ch-ink) 100%);
+  }
+}
+@keyframes ch-title-light {
+  0%,15% { background-position:100% 50%; }
+  75%,100% { background-position:0% 50%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ch-title-shine { animation:none!important; background:none; color:var(--ch-ink); -webkit-text-fill-color:currentColor; }
+}
+[data-motion=reduced] .ch-title-shine { animation:none!important; background:none; color:var(--ch-ink); -webkit-text-fill-color:currentColor; }
+@media(forced-colors:active) {
+  .ch-title-shine { animation:none!important; background:none; color:CanvasText; -webkit-text-fill-color:CanvasText; }
+}
