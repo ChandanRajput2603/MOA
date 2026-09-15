@@ -76,3 +76,9 @@
   .cinematic-home .ch-sport-visual { animation: none !important; transform: none; }
 }
 [data-motion=reduced] .cinematic-home .ch-sport-visual { animation: none !important; transform: none; }
+
+/* Give the sport image card a little more space above it. */
+.cinematic-home .ch-sport-visual { margin-top: 28px; }
+@media (max-width: 800px) {
+  .cinematic-home .ch-sport-visual { margin-top: 12px; }
+}
