@@ -1,0 +1,147 @@
+.cinematic-home{--ch-bg:#f5f3ee;--ch-ink:#172a32;--ch-muted:#56636a;--ch-accent:#ad480c;--ch-line:#172a3229;--ch-panel:#ebe8e0;background:var(--ch-bg);color:var(--ch-ink);overflow:clip}
+[data-theme=dark] .cinematic-home{--ch-bg:#0b1319;--ch-ink:#f1f0e9;--ch-muted:#a5b1b9;--ch-accent:#ffad65;--ch-line:#e5e9ed2b;--ch-panel:#121f28}
+.cinematic-home p{color:var(--ch-muted)}.cinematic-home em{font-style:normal;color:var(--ch-accent)}.cinematic-home a{display:inline-flex;gap:14px;align-items:center}.cinematic-home button{color:inherit}.cinematic-home h1,.cinematic-home h2{font-weight:850;line-height:.94;letter-spacing:-.06em}.cinematic-home h2{font-size:clamp(40px,6.5vw,92px)}.cinematic-home .ch-kicker{font-size:11px;letter-spacing:.17em;font-weight:700;color:var(--ch-accent);margin-bottom:28px}.cinematic-home h3{overflow-wrap:anywhere}.ch-chapter{padding:110px 7%;border-bottom:1px solid var(--ch-line);scroll-margin-top:120px}.ch-section-top{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:50px}.ch-section-top>a{flex-shrink:0;padding-bottom:8px;border-bottom:1px solid var(--ch-line)}
+.cinematic-home .ch-hero{position:relative;isolation:isolate;min-height:calc(100svh - 110px);padding:12px 6% 26px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:var(--ch-bg)}.ch-stadium{position:absolute;inset:0;z-index:-1;overflow:hidden;transform:translate3d(var(--ch-x,0px),var(--ch-y,0px),0);transition:transform .35s ease-out}.ch-stadium:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--ch-bg) 1%,transparent 85%),url('/balewadistadium.webp') center/cover;opacity:.23}.ch-stadium:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,var(--ch-bg),transparent 35%)}.ch-hero-top,.ch-hero-bottom{display:flex;justify-content:space-between;gap:20px;font-size:10px;letter-spacing:.13em}.ch-hero-copy{padding:0 0 70px;position:relative}.cinematic-home .ch-hero h1{font-size:clamp(48px,8.2vw,124px);margin:0;max-width:1100px}.ch-hero h1 em{font-size:.58em;letter-spacing:-.055em}.cinematic-home .ch-intro-copy{margin:30px 0 14px;font-size:18px;line-height:1.5}.cinematic-home .ch-action{padding:15px 23px;background:var(--ch-ink);color:var(--ch-bg);font-size:14px;font-weight:700;transition:transform .25s,background .25s}.ch-action:hover{transform:translateY(-3px)}.ch-orbit{position:absolute;width:78vw;height:78vw;border:2px solid var(--ch-accent);border-radius:50%;right:-32vw;top:0;transform:rotateX(62deg) rotateZ(-25deg);box-shadow:0 0 0 25px var(--ch-line),0 0 0 50px var(--ch-line),0 0 0 75px var(--ch-line);opacity:.32}.ch-orbit-two{top:30%;right:-15%;opacity:.16}.ch-beam{position:absolute;inset:-40%;background:conic-gradient(from 190deg at 78% 10%,transparent 0deg,#e5c09221 18deg,transparent 30deg);transform:rotate(-10deg)}.ch-stadium>i{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--ch-accent);opacity:.3;animation:ch-dust 10s ease-in-out infinite alternate}.ch-hero-bottom{position:relative;top:-16px;padding-top:30px;border-top:1px solid var(--ch-line)}
+.ch-sport-stage{display:grid;grid-template-columns:1fr 1.2fr;margin-top:48px;gap:7%}.ch-sport-menu{display:flex;flex-direction:column}.ch-sport-menu button{display:flex;align-items:center;gap:22px;background:none;border:0;border-bottom:1px solid var(--ch-line);padding:23px 0;text-align:left;font-size:clamp(22px,3vw,40px);font-weight:700;transition:color .25s,padding .25s}.ch-sport-menu button small{font-size:11px;opacity:.55}.ch-sport-menu button svg{margin-left:auto}.ch-sport-menu button[aria-pressed=true]{color:var(--ch-accent);padding-left:12px}.ch-sport-visual{position:relative;min-height:490px;background:var(--ch-panel);overflow:hidden;animation:ch-enter .5s ease both}.ch-sport-visual>img{position:absolute;width:100%;height:100%;object-fit:cover}.ch-sport-visual:has(>img) .ch-sport-caption{color:#fff;background:linear-gradient(transparent,#08121bee);padding-top:100px}.ch-sport-visual:has(>img) p{color:#d8e0e7}.ch-sport-caption{position:absolute;bottom:0;left:0;right:0;padding:32px}.ch-sport-caption>span{font-size:11px;letter-spacing:.13em}.ch-sport-caption h3{font-size:clamp(34px,5vw,64px);margin:15px 0}.ch-track-art{position:absolute;inset:-60% -25% 15%;transform:rotate(-30deg);perspective:900px}.ch-track-art i{position:absolute;inset:calc(var(--i,0)*28px);border:2px solid var(--ch-accent);border-radius:48%;opacity:.4}.ch-track-art i:nth-child(2){--i:1}.ch-track-art i:nth-child(3){--i:2}.ch-track-art i:nth-child(4){--i:3}.ch-track-art i:nth-child(5){--i:4}
+.ch-events{background:var(--ch-panel)}.cinematic-home .ch-event{display:grid;grid-template-columns:50px 1fr 210px;padding:30px 0;border-top:1px solid var(--ch-line);gap:24px;transition:padding .25s}.ch-event:hover{padding-left:12px}.ch-event-index{font-size:28px;color:var(--ch-accent);align-self:start}.ch-event h3{font-size:clamp(22px,3vw,36px)}.ch-event .ch-kicker{margin-bottom:12px}.ch-event p{margin:0}.ch-event-date{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:13px}.ch-athlete{display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center;margin-top:60px;animation:ch-enter .55s ease both}.ch-athlete-photo{min-height:460px;position:relative;background:var(--ch-panel)}.ch-athlete-photo img{width:100%;height:560px;object-fit:cover;object-position:top}.ch-athlete-story h3{font-size:clamp(35px,5vw,72px);letter-spacing:-.05em;line-height:1}.ch-athlete-story>p:not(.ch-kicker){white-space:pre-line;max-height:260px;overflow:auto;margin:28px 0}.ch-monogram{min-height:460px;display:grid;place-items:center;font-size:100px;font-weight:850;color:var(--ch-line)}.ch-controls{display:flex;justify-content:flex-end;align-items:center;gap:25px;margin-top:25px}.ch-controls button{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--ch-line);background:transparent}.ch-champion-empty{padding:70px 0 0;display:flex;justify-content:space-between;gap:25px;align-items:end}.ch-champion-empty>span{font-size:clamp(28px,4vw,55px);font-weight:750;line-height:1.1}
+.ch-medals{display:grid;grid-template-columns:1.1fr 1fr;gap:8%;align-items:center;background:var(--ch-panel)}.ch-medals h2{margin-bottom:35px}.ch-medal-row{display:grid;grid-template-columns:100px 1fr auto;align-items:center;border-bottom:1px solid var(--ch-line);padding:24px 0;gap:16px}.ch-medal-row>span{font-size:12px;letter-spacing:.13em}.ch-medal-row strong{font-size:clamp(36px,6vw,72px);font-weight:700;line-height:1;font-variant-numeric:tabular-nums}.ch-medal{width:76px;height:76px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(125deg,#a2641c,#f4d389 32%,#c08a36 48%,#ffe0a0 66%,#915920);box-shadow:inset 0 0 0 5px #ffffff35,inset 0 0 0 8px #60400b35,4px 7px 0 #76511d,8px 14px 20px #0003;transform:perspective(500px) rotateY(-18deg) rotateX(12deg);color:#513913;font-size:30px;font-weight:800}.ch-metal-1 .ch-medal{background:linear-gradient(125deg,#687784,#ecf1f4,#a9b8c1,#f0f1f2,#72808a);color:#38434c;box-shadow:inset 0 0 0 5px #ffffff35,inset 0 0 0 8px #35475535,4px 7px 0 #687784,8px 14px 20px #0003}.ch-metal-2 .ch-medal{background:linear-gradient(125deg,#814a30,#e6af87,#a76b48,#e4b691,#784d31);color:#54321f}.ch-medal-board>p{font-size:12px;margin-top:24px}.ch-region-controls{display:flex;flex-wrap:wrap;gap:12px;margin:36px 0}.ch-region-controls button{background:transparent;border:1px solid var(--ch-line);padding:13px 20px}.ch-region-controls button[aria-pressed=true]{background:var(--ch-ink);color:var(--ch-bg)}.ch-region-result{padding:32px;background:var(--ch-panel);min-height:180px}.ch-region-result h3{font-size:32px}.ch-region-result a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--ch-line)}.cinematic-home .ch-result-row{display:grid;grid-template-columns:70px 1fr 100px 24px;border-top:1px solid var(--ch-line);padding:25px 0;gap:20px}.ch-result-row>strong{font-size:40px;color:var(--ch-accent)}.ch-result-row h3{font-size:24px}.ch-result-row p{margin:0}.ch-result-row>span{font-size:12px;letter-spacing:.1em}.ch-news{background:var(--ch-panel)}.ch-news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px}.ch-news-grid>a{display:block;border-top:1px solid var(--ch-line);padding-top:20px}.ch-news-grid img{width:100%;height:240px;object-fit:cover;margin-bottom:25px}.ch-news-grid h3{font-size:28px;line-height:1.15}.ch-news-grid .ch-kicker{margin-bottom:14px}.ch-document-link{margin-top:50px;padding-top:25px;border-top:1px solid var(--ch-line);width:100%;justify-content:space-between}.ch-closing{padding-top:130px;padding-bottom:130px;position:relative}.ch-closing h2{font-size:clamp(48px,9vw,128px);margin-bottom:40px}.ch-reveal{opacity:0;transform:translateY(32px);transition:opacity .85s ease,transform .85s ease}.ch-reveal.ch-seen,.ch-reveal:focus-within{opacity:1;transform:none}.ch-home-footer{background:#142631!important;color:#f1f0e9!important;border-top:1px solid #ffffff2b!important}.ch-home-footer p,.ch-home-footer small{color:#c0cbd1}.ch-home-footer a{color:#f1f0e9}
+@keyframes ch-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes ch-dust{to{transform:translate(12px,-25px);opacity:.12}}
+@media(max-width:800px){.ch-chapter{padding:65px 6%}.ch-hero-top>span:last-child,.ch-hero-bottom>span{display:none}.ch-hero-copy{padding:0 0 65px}.cinematic-home .ch-hero h1{font-size:clamp(38px,9vw,65px)}.ch-hero h1 em{font-size:.65em}.ch-section-top{align-items:start;flex-direction:column;gap:20px}.ch-sport-stage,.ch-athlete,.ch-medals{grid-template-columns:1fr;gap:35px}.ch-sport-menu{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.ch-sport-menu button{font-size:18px;gap:8px;padding:18px 0}.ch-sport-visual{min-height:400px}.cinematic-home .ch-event{grid-template-columns:30px 1fr;gap:15px}.ch-event-date{grid-column:2}.ch-athlete-photo img{height:420px}.ch-champion-empty{align-items:start;flex-direction:column}.ch-news-grid{grid-template-columns:1fr}.ch-news-grid img{height:260px}.cinematic-home .ch-result-row{grid-template-columns:40px 1fr 24px;gap:12px}.ch-result-row>span{grid-column:2}.ch-result-row>svg{grid-column:3;grid-row:1}.ch-stadium>i:nth-of-type(n+7){display:none}.ch-closing{padding-top:80px;padding-bottom:80px}.ch-medal-row{grid-template-columns:90px 1fr auto}}
+@media(prefers-reduced-motion:reduce){.cinematic-home *,.cinematic-home *:before,.cinematic-home *:after{animation:none!important;transition:none!important}.ch-reveal{opacity:1;transform:none}.ch-stadium{transform:none}}
+[data-motion=reduced] .cinematic-home *,[data-motion=reduced] .cinematic-home *:before,[data-motion=reduced] .cinematic-home *:after{animation:none!important;transition:none!important}[data-motion=reduced] .ch-reveal{opacity:1;transform:none}[data-motion=reduced] .ch-stadium{transform:none}
+
+.cinematic-home .ch-hero-copy > .ch-kicker { margin-top: 0; }
+
+/* Full sport directory: keep the visual alongside a compact searchable list. */
+.cinematic-home .ch-sport-stage { align-items: start; }
+.cinematic-home .ch-sport-browser { min-width: 0; }
+.cinematic-home .ch-sport-browser label { display: block; font-size: 13px; margin-bottom: 8px; }
+.cinematic-home .ch-sport-browser input { width: 100%; background: var(--ch-panel); color: var(--ch-ink); border: 1px solid var(--ch-line); border-radius: 0; padding: 12px 14px; }
+.cinematic-home .ch-sport-browser input::placeholder { color: var(--ch-muted); opacity: 1; }
+.cinematic-home .ch-sport-count { font-size: 12px; margin: 10px 0; }
+.cinematic-home .ch-sport-menu { max-height: 430px; overflow-y: auto; scrollbar-gutter: stable; padding-right: 8px; }
+.cinematic-home .ch-sport-menu button { flex-shrink: 0; font-size: clamp(20px, 2.2vw, 30px); }
+.cinematic-home .ch-sport-menu button span { overflow-wrap: anywhere; }
+.cinematic-home .ch-sport-menu button svg { flex-shrink: 0; }
+@media (max-width: 800px) {
+  .cinematic-home .ch-sport-menu { display: flex; max-height: 300px; }
+  .cinematic-home .ch-sport-menu button { font-size: 20px; }
+}
+
+/* Match the sport upload crop on every screen size. */
+.cinematic-home .ch-sport-visual { border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 3; min-height: 0; }
+.cinematic-home .ch-sport-visual > img { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cinematic-home .ch-sport-caption h3 { font-size: clamp(26px, 4vw, 56px); }
+@media (max-width: 800px) {
+  .cinematic-home .ch-sport-caption { padding: 18px; }
+  .cinematic-home .ch-sport-caption h3 { font-size: clamp(24px, 6vw, 40px); margin: 8px 0; }
+  .cinematic-home .ch-sport-caption p { margin: 4px 0 8px; font-size: 13px; }
+  .cinematic-home .ch-sport-caption a { font-size: 12px; gap: 8px; }
+}
+
+/* Stable text widths and complete screen-reader text during typing. */
+.ch-typing-word { white-space: nowrap; }
+.ch-typing-hidden { visibility: hidden; }
+.ch-typing-readable {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ch-typing-hidden { visibility: visible; }
+}
+[data-motion=reduced] .ch-typing-hidden { visibility: visible; }
+
+/* Rotate the old sport away, swap at the edge, then reveal the new face. */
+.cinematic-home .ch-sport-visual {
+  transform: perspective(1100px) rotateY(0deg);
+  backface-visibility: hidden;
+  transform-origin: center center;
+  animation: none;
+}
+.cinematic-home .ch-sport-visual.ch-flip-out {
+  animation: ch-sport-flip-out 220ms ease-in both;
+}
+.cinematic-home .ch-sport-visual.ch-flip-in {
+  animation: ch-sport-flip-in 300ms ease-out both;
+}
+@keyframes ch-sport-flip-out {
+  from { transform: perspective(1100px) rotateY(0deg); }
+  to { transform: perspective(1100px) rotateY(90deg); }
+}
+@keyframes ch-sport-flip-in {
+  from { transform: perspective(1100px) rotateY(-90deg); }
+  to { transform: perspective(1100px) rotateY(0deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-home .ch-sport-visual { animation: none !important; transform: none; }
+}
+[data-motion=reduced] .cinematic-home .ch-sport-visual { animation: none !important; transform: none; }
+
+/* Give the sport image card a little more space above it. */
+.cinematic-home .ch-sport-visual { margin-top: 28px; }
+@media (max-width: 800px) {
+  .cinematic-home .ch-sport-visual { margin-top: 12px; }
+}
+
+/* Leadership complements the hero without overlapping its headline. */
+.ch-hero-support { display:flex; align-items:center; justify-content:space-between; gap:40px; margin-top:22px; }
+.ch-hero-support>div { flex-shrink:0; }
+.cinematic-home .ch-hero-support .ch-intro-copy { margin-top:0; }
+.ch-leadership { width:min(100%,560px); padding-left:26px; border-left:1px solid var(--ch-line); }
+.cinematic-home .ch-leadership-label { margin:0 0 14px; font-size:9px; font-weight:700; letter-spacing:.2em; color:var(--ch-muted); }
+.ch-leadership-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+.cinematic-home .ch-leader { display:flex; align-items:center; gap:13px; min-width:0; border-radius:12px; transition:transform .2s ease; }
+.ch-leader-photo { display:block; flex-shrink:0; width:82px; height:98px; padding:3px; border:1px solid var(--ch-line); border-radius:18px 18px 6px 6px; background:var(--ch-panel); overflow:hidden; }
+.ch-leader-photo img { display:block; width:100%; height:100%; object-fit:contain; object-position:center; border-radius:14px 14px 3px 3px; }
+.ch-leader-monogram { display:grid; place-items:center; height:100%; color:var(--ch-accent); font-size:20px; font-weight:800; }
+.ch-leader-caption { display:flex; flex-direction:column; gap:7px; min-width:0; }
+.ch-leader-role { color:var(--ch-accent); font-size:9px; line-height:1.4; text-transform:uppercase; letter-spacing:.09em; font-weight:750; }
+.ch-leader-caption strong { font-size:14px; font-weight:750; line-height:1.35; overflow-wrap:anywhere; }
+.ch-leader-link { display:flex; align-items:center; gap:6px; color:var(--ch-muted); font-size:10px; }
+.ch-leader:hover { transform:translateY(-3px); }
+.ch-leader:focus-visible { outline:2px solid var(--ch-accent); outline-offset:6px; }
+@media(max-width:1050px) {
+  .ch-hero-support { align-items:flex-start; gap:24px; }
+  .ch-leadership { width:460px; padding-left:20px; }
+  .ch-leadership-pair { gap:16px; }
+  .cinematic-home .ch-leader { flex-direction:column; align-items:flex-start; }
+  .ch-leader-photo { width:90px; height:100px; }
+}
+@media(max-width:600px) {
+  .ch-hero-support { flex-direction:column; gap:28px; }
+  .ch-leadership { width:100%; padding:22px 0 0; border-left:0; border-top:1px solid var(--ch-line); }
+  .ch-leadership-pair { gap:20px; }
+  .ch-leader-photo { width:100px; height:110px; }
+}
+@media(prefers-reduced-motion:reduce) { .ch-leader { transition:none!important; transform:none!important; } }
+[data-motion=reduced] .ch-leader { transition:none!important; transform:none!important; }
+
+/* A slow light sweep confined to the two opening headline lines. */
+.ch-title-shine { color:var(--ch-ink); }
+@supports ((background-clip:text) or (-webkit-background-clip:text)) {
+  .ch-title-shine {
+    display:inline-block;
+    background-image:linear-gradient(110deg,var(--ch-ink) 0%,var(--ch-ink) 42%,var(--ch-accent) 49%,var(--ch-ink) 56%,var(--ch-ink) 100%);
+    background-size:250% 100%;
+    background-position:100% 50%;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+    animation:ch-title-light 6s ease-in-out infinite;
+  }
+  [data-theme=dark] .ch-title-shine {
+    background-image:linear-gradient(110deg,var(--ch-ink) 0%,var(--ch-ink) 42%,#ffce9b 48%,#fff 50%,var(--ch-ink) 56%,var(--ch-ink) 100%);
+  }
+}
+@keyframes ch-title-light {
+  0%,15% { background-position:100% 50%; }
+  75%,100% { background-position:0% 50%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ch-title-shine { animation:none!important; background:none; color:var(--ch-ink); -webkit-text-fill-color:currentColor; }
+}
+[data-motion=reduced] .ch-title-shine { animation:none!important; background:none; color:var(--ch-ink); -webkit-text-fill-color:currentColor; }
+@media(forced-colors:active) {
+  .ch-title-shine { animation:none!important; background:none; color:CanvasText; -webkit-text-fill-color:CanvasText; }
+}
