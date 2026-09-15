@@ -1785,3 +1785,14 @@ dialog::backdrop {
 @media(max-width:600px) { .council-card-body { padding:20px; } }
 @media(prefers-reduced-motion:reduce) { .council-card,.council-card-bottom svg { transition:none; transform:none!important; } }
 [data-motion=reduced] .council-card,[data-motion=reduced] .council-card-bottom svg { transition:none; transform:none!important; }
+
+/* Show the entire uploaded portrait on member and athlete profiles. */
+.detail-image.detail-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  object-position: center top;
+  background: var(--raw-surface);
+}

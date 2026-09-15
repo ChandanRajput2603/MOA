@@ -1371,7 +1371,7 @@ function Detail({ module }: { module: ModuleName }) {
         <>
           <Title eyebrow={r.sport || r.category} title={r.title} />
           {r.imageUrl && (
-            <img className="detail-image" src={r.imageUrl} alt={r.title} />
+            <img className={["committee", "affiliated-members", "associate-members", "directory", "athletes"].includes(module) ? "detail-image detail-portrait" : "detail-image"} src={r.imageUrl} alt={r.title} />
           )}
           <p className="article-text">{r.description}</p>
           <div className="detail-fields">
