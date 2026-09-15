@@ -29,7 +29,10 @@ try {
    };
    if("organization" in record.data) patch["data.organization"]=record.data.organization;
    if("department" in record.data) patch["data.department"]=record.data.department;
-   // Preserve the existing photo, name, contact details, description and publication status.
+   for(const field of ["email","additionalEmails","phone"] as const) {
+    if(record.data[field]) patch["data."+field]=record.data[field];
+   }
+   // Preserve the existing photo, name, description and publication status.
    await Content.updateOne({_id:match._id},{$set:patch});
    updated++;
   } else {

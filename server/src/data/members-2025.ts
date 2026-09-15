@@ -1,4 +1,4 @@
-// Names and roles transcribed from the user-supplied 2025–2029 member lists.
+// Source: supplied 2025–2029 PDFs. Council follows page, row, then column order.
 export const members2025 = [
   {
     "data": {
@@ -7,7 +7,10 @@ export const members2025 = [
       "order": 1,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Murlidhar Mohol"
+      "title": "Mr. Murlidhar Mohol",
+      "email": "murlidhar.mohol@gmail.com",
+      "additionalEmails": "",
+      "phone": "9923749292"
     },
     "module": "committee",
     "sourcePage": 1
@@ -15,11 +18,14 @@ export const members2025 = [
   {
     "data": {
       "department": "Maharashtra Olympic Association",
-      "designation": "Vice President",
+      "designation": "Secretary General",
       "order": 2,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sandeep Joshi"
+      "title": "Mr. Sanjay Shete",
+      "email": "shetesanjay50@gmail.com",
+      "additionalEmails": "",
+      "phone": "9930888245"
     },
     "module": "committee",
     "sourcePage": 1
@@ -27,11 +33,14 @@ export const members2025 = [
   {
     "data": {
       "department": "Maharashtra Olympic Association",
-      "designation": "Vice President",
+      "designation": "Treasurer",
       "order": 3,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Manoj Kotak"
+      "title": "Mr. Arun Lakhani",
+      "email": "arunlakhani@vishvaraj.in",
+      "additionalEmails": "",
+      "phone": "9823082032"
     },
     "module": "committee",
     "sourcePage": 1
@@ -43,43 +52,10 @@ export const members2025 = [
       "order": 4,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Ms. Smita Yadav"
-    },
-    "module": "committee",
-    "sourcePage": 1
-  },
-  {
-    "data": {
-      "department": "Maharashtra Olympic Association",
-      "designation": "Vice President",
-      "order": 5,
-      "status": "published",
-      "tenure": "2025–2029",
-      "title": "Mr. Manoj Bhore"
-    },
-    "module": "committee",
-    "sourcePage": 1
-  },
-  {
-    "data": {
-      "department": "Maharashtra Olympic Association",
-      "designation": "Secretary General",
-      "order": 6,
-      "status": "published",
-      "tenure": "2025–2029",
-      "title": "Mr. Sanjay Shete"
-    },
-    "module": "committee",
-    "sourcePage": 1
-  },
-  {
-    "data": {
-      "department": "Maharashtra Olympic Association",
-      "designation": "Treasurer",
-      "order": 7,
-      "status": "published",
-      "tenure": "2025–2029",
-      "title": "Mr. Arun Lakhani"
+      "title": "Mr. Sandeep Joshi",
+      "email": "sandipjoshi1970@gmail.com",
+      "additionalEmails": "",
+      "phone": "9823105681"
     },
     "module": "committee",
     "sourcePage": 1
@@ -88,10 +64,58 @@ export const members2025 = [
     "data": {
       "department": "Maharashtra Olympic Association",
       "designation": "Joint Secretary",
+      "order": 5,
+      "status": "published",
+      "tenure": "2025–2029",
+      "title": "Mr. Shailesh Tilak",
+      "email": "stilak@yahoo.com",
+      "additionalEmails": "",
+      "phone": "9422029656"
+    },
+    "module": "committee",
+    "sourcePage": 1
+  },
+  {
+    "data": {
+      "department": "Maharashtra Olympic Association",
+      "designation": "Vice President",
+      "order": 6,
+      "status": "published",
+      "tenure": "2025–2029",
+      "title": "Mr. Manoj Kotak",
+      "email": "manojkotak@hotmail.com",
+      "additionalEmails": "",
+      "phone": "9821163742"
+    },
+    "module": "committee",
+    "sourcePage": 1
+  },
+  {
+    "data": {
+      "department": "Maharashtra Olympic Association",
+      "designation": "Joint Secretary",
+      "order": 7,
+      "status": "published",
+      "tenure": "2025–2029",
+      "title": "Mr. Nilesh Jagtap",
+      "email": "nil7363@gmail.com",
+      "additionalEmails": "",
+      "phone": "8806664877"
+    },
+    "module": "committee",
+    "sourcePage": 1
+  },
+  {
+    "data": {
+      "department": "Maharashtra Olympic Association",
+      "designation": "Vice President",
       "order": 8,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Shailesh Tilak"
+      "title": "Ms. Smita Yadav",
+      "email": "smita2row@gmail.com",
+      "additionalEmails": "",
+      "phone": "9823087885"
     },
     "module": "committee",
     "sourcePage": 1
@@ -103,7 +127,10 @@ export const members2025 = [
       "order": 9,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Nilesh Jagtap"
+      "title": "Mr. Uday Dongre",
+      "email": "udaydongare1112@gmail.com",
+      "additionalEmails": "",
+      "phone": "9823389959"
     },
     "module": "committee",
     "sourcePage": 1
@@ -111,11 +138,14 @@ export const members2025 = [
   {
     "data": {
       "department": "Maharashtra Olympic Association",
-      "designation": "Joint Secretary",
+      "designation": "Vice President",
       "order": 10,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Uday Dongre"
+      "title": "Mr. Manoj Bhore",
+      "email": "bmanojoo7@gmail.com",
+      "additionalEmails": "",
+      "phone": "9822836161"
     },
     "module": "committee",
     "sourcePage": 1
@@ -127,7 +157,10 @@ export const members2025 = [
       "order": 11,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Pradip Khandre"
+      "title": "Mr. Pradip Khandre",
+      "email": "pradeepbkhandre@gmail.com",
+      "additionalEmails": "",
+      "phone": "9921590373"
     },
     "module": "committee",
     "sourcePage": 1
@@ -139,7 +172,10 @@ export const members2025 = [
       "order": 12,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Namdev Shirgaonkar"
+      "title": "Mr. Namdev Shirgaonkar",
+      "email": "namdevshirgaonkar@gmail.com",
+      "additionalEmails": "",
+      "phone": "9967487262"
     },
     "module": "committee",
     "sourcePage": 2
@@ -151,7 +187,10 @@ export const members2025 = [
       "order": 13,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sopan Katke"
+      "title": "Mr. Sopan Katke",
+      "email": "sopankatke@yahoo.co.in",
+      "additionalEmails": "",
+      "phone": "8788378001"
     },
     "module": "committee",
     "sourcePage": 2
@@ -163,7 +202,10 @@ export const members2025 = [
       "order": 14,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Rajiv Desai"
+      "title": "Mr. Rajiv Desai",
+      "email": "rajivdesai31@gmail.com",
+      "additionalEmails": "",
+      "phone": "9822033344"
     },
     "module": "committee",
     "sourcePage": 2
@@ -175,7 +217,10 @@ export const members2025 = [
       "order": 15,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Kiran Chougule"
+      "title": "Mr. Kiran Chougule",
+      "email": "kiranchougule@wifa.in",
+      "additionalEmails": "",
+      "phone": "9834073804"
     },
     "module": "committee",
     "sourcePage": 2
@@ -187,7 +232,10 @@ export const members2025 = [
       "order": 16,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Adv. Vikram Rothe"
+      "title": "Adv. Vikram Rothe",
+      "email": "vikramrothe@gmail.com",
+      "additionalEmails": "",
+      "phone": "9819055000"
     },
     "module": "committee",
     "sourcePage": 2
@@ -199,7 +247,10 @@ export const members2025 = [
       "order": 17,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Ashish Bodas"
+      "title": "Mr. Ashish Bodas",
+      "email": "ashishbodas@gmail.com",
+      "additionalEmails": "",
+      "phone": "9822548000"
     },
     "module": "committee",
     "sourcePage": 2
@@ -211,7 +262,10 @@ export const members2025 = [
       "order": 18,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Ms. Leena Kamble"
+      "title": "Ms. Leena Kamble",
+      "email": "leenakamble11@gmail.com",
+      "additionalEmails": "",
+      "phone": "9987090599"
     },
     "module": "committee",
     "sourcePage": 2
@@ -223,7 +277,10 @@ export const members2025 = [
       "order": 19,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Rakesh Tiwari"
+      "title": "Mr. Rakesh Tiwari",
+      "email": "rakeshtiwariboxing@gmail.com",
+      "additionalEmails": "",
+      "phone": "9765261934"
     },
     "module": "committee",
     "sourcePage": 2
@@ -235,7 +292,10 @@ export const members2025 = [
       "order": 20,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Satish Ingale"
+      "title": "Mr. Satish Ingale",
+      "email": "satish_ingle10@yahoo.com",
+      "additionalEmails": "",
+      "phone": "8208279721"
     },
     "module": "committee",
     "sourcePage": 2
@@ -247,7 +307,10 @@ export const members2025 = [
       "order": 21,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Prashant Deshpande"
+      "title": "Mr. Prashant Deshpande",
+      "email": "prashantdeshpande1304@gmail.com",
+      "additionalEmails": "",
+      "phone": "9422157028"
     },
     "module": "committee",
     "sourcePage": 2
@@ -259,7 +322,10 @@ export const members2025 = [
       "order": 22,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Chadrajit Jadhav"
+      "title": "Mr. Chadrajit Jadhav",
+      "email": "chandrajitjadhav@gmail.com",
+      "additionalEmails": "",
+      "phone": "9422070155"
     },
     "module": "committee",
     "sourcePage": 2
@@ -271,7 +337,10 @@ export const members2025 = [
       "order": 23,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr.Govind K. Muthukumar"
+      "title": "Mr.Govind K. Muthukumar",
+      "email": "govind@tridhaatu.com",
+      "additionalEmails": "",
+      "phone": "9820612002"
     },
     "module": "committee",
     "sourcePage": 2
@@ -283,7 +352,10 @@ export const members2025 = [
       "order": 24,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sandip Bhondve"
+      "title": "Mr. Sandip Bhondve",
+      "email": "sandipappabhondve@gmail.com",
+      "additionalEmails": "",
+      "phone": "9921665555"
     },
     "module": "committee",
     "sourcePage": 3
@@ -295,7 +367,10 @@ export const members2025 = [
       "order": 25,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sameer Mungekar"
+      "title": "Mr. Sameer Mungekar",
+      "email": "sameerm1727@gmai.com",
+      "additionalEmails": "",
+      "phone": "9820605484"
     },
     "module": "committee",
     "sourcePage": 3
@@ -307,7 +382,10 @@ export const members2025 = [
       "order": 26,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sandip Chaudhari"
+      "title": "Mr. Sandip Chaudhari",
+      "email": "physiosandeep@yahoo.com",
+      "additionalEmails": "",
+      "phone": "9323307785"
     },
     "module": "committee",
     "sourcePage": 3
@@ -319,7 +397,10 @@ export const members2025 = [
       "order": 27,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Amjadkhan (Gafar) Pathan"
+      "title": "Mr. Amjadkhan (Gafar) Pathan",
+      "email": "gaffarpathan15@gmail.com",
+      "additionalEmails": "",
+      "phone": "9595969566"
     },
     "module": "committee",
     "sourcePage": 3
@@ -331,7 +412,10 @@ export const members2025 = [
       "order": 28,
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Prashant Bendre"
+      "title": "Mr. Prashant Bendre",
+      "email": "ppbendre75@gmail.com",
+      "additionalEmails": "",
+      "phone": "8983037077"
     },
     "module": "committee",
     "sourcePage": 3
@@ -343,7 +427,10 @@ export const members2025 = [
       "organization": "Maharashtra Archery Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Adv. Prashant Deshpande"
+      "title": "Adv. Prashant Deshpande",
+      "email": "prashantdeshpande1304@gmail.com",
+      "additionalEmails": "",
+      "phone": "R- 0721 2679091 M- 9422157028"
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -355,7 +442,10 @@ export const members2025 = [
       "organization": "Maharashtra Archery Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Pramod Chandurkar"
+      "title": "Mr. Pramod Chandurkar",
+      "email": "chandurkar2001@yahoo.com",
+      "additionalEmails": "archerypramod@gmail.com",
+      "phone": "R- 0721 2561847 M- 9823135257 9021011907"
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -367,7 +457,10 @@ export const members2025 = [
       "organization": "Maharashtra Athletics Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Vijay Kumar Gautam"
+      "title": "Mr. Vijay Kumar Gautam",
+      "email": "",
+      "additionalEmails": "",
+      "phone": ""
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -379,7 +472,10 @@ export const members2025 = [
       "organization": "Maharashtra Athletics Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Satish Uchil"
+      "title": "Mr. Satish Uchil",
+      "email": "maharashtra@indianathletics.in",
+      "additionalEmails": "mahaathletics@gmail.com",
+      "phone": "M- 9820041378 9820041370"
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -391,7 +487,10 @@ export const members2025 = [
       "organization": "Maharashtra Badminton Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Arun Lakhani"
+      "title": "Mr. Arun Lakhani",
+      "email": "arun.lakhani@vilindia.com",
+      "additionalEmails": "arunlakhani@vishvaraj.in",
+      "phone": "Mob.: 9823082032"
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -403,7 +502,10 @@ export const members2025 = [
       "organization": "Maharashtra Badminton Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sidharth Patil"
+      "title": "Mr. Sidharth Patil",
+      "email": "Secretariatemba@gmail.com",
+      "additionalEmails": "Secretary@mbasso.in",
+      "phone": "Mo. No. 83299 76461"
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -415,7 +517,10 @@ export const members2025 = [
       "organization": "Maharashtra State Basketball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sandip Joshi"
+      "title": "Mr. Sandip Joshi",
+      "email": "sandipjoshi1970@gmail.com",
+      "additionalEmails": "",
+      "phone": "Mo. No. - 9823105681"
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -427,7 +532,10 @@ export const members2025 = [
       "organization": "Maharashtra State Basketball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Govind Krishnan Muthukumar"
+      "title": "Mr. Govind Krishnan Muthukumar",
+      "email": "secretarymsba@gmail.com",
+      "additionalEmails": "",
+      "phone": "022-24106562 9820612002"
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -439,7 +547,10 @@ export const members2025 = [
       "organization": "Maharashtra Association For Canoeing & Kayaking",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sameer Mungekar"
+      "title": "Mr. Sameer Mungekar",
+      "email": "sameerm1727@gmail.com",
+      "additionalEmails": "",
+      "phone": "9833705484"
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -451,7 +562,10 @@ export const members2025 = [
       "organization": "Maharashtra Association For Canoeing & Kayaking",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Surendra Kore"
+      "title": "Mr. Surendra Kore",
+      "email": "secretorymack@gmail.com",
+      "additionalEmails": "",
+      "phone": "8275271650"
     },
     "module": "affiliated-members",
     "sourcePage": 1
@@ -463,7 +577,10 @@ export const members2025 = [
       "organization": "Cycling Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Adv. Vikram Rothe"
+      "title": "Adv. Vikram Rothe",
+      "email": "vikramrothe@gmail.com",
+      "additionalEmails": "",
+      "phone": "9821244090 9819055000"
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -475,7 +592,10 @@ export const members2025 = [
       "organization": "Cycling Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Prof. Sanjay Sathe"
+      "title": "Prof. Sanjay Sathe",
+      "email": "cyclingassociationmaharashtra@gmail.com",
+      "additionalEmails": "",
+      "phone": "7385081270 7972189670"
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -487,7 +607,10 @@ export const members2025 = [
       "organization": "Maharashtra Fencing Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Satej Dnyandeo Patil"
+      "title": "Mr. Satej Dnyandeo Patil",
+      "email": "satejpatiloffice@gmail.com",
+      "additionalEmails": "",
+      "phone": "9823012905 9821999988"
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -499,7 +622,10 @@ export const members2025 = [
       "organization": "Maharashtra Fencing Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Dr. Uday Parmeshwar Dongare"
+      "title": "Dr. Uday Parmeshwar Dongare",
+      "email": "mahafencing@gmail.com",
+      "additionalEmails": "",
+      "phone": "(0253) 2532124 Fax (0253) 2512105 M 9823389959, 8275515760"
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -511,7 +637,10 @@ export const members2025 = [
       "organization": "The Western India Football Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Praful Patel"
+      "title": "Mr. Praful Patel",
+      "email": "wifamumbai@yahoo.com",
+      "additionalEmails": "",
+      "phone": ""
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -523,7 +652,10 @@ export const members2025 = [
       "organization": "The Western India Football Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Kiran Pandurang Chougale"
+      "title": "Mr. Kiran Pandurang Chougale",
+      "email": "kiranchougule@wifa.in",
+      "additionalEmails": "info@wifa.in",
+      "phone": "9834073804"
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -535,7 +667,10 @@ export const members2025 = [
       "organization": "Maharashtra Amateur Gymnastics Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sanjay Shete"
+      "title": "Mr. Sanjay Shete",
+      "email": "shetesanjay50@gmail.com",
+      "additionalEmails": "",
+      "phone": "9930888245"
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -547,7 +682,10 @@ export const members2025 = [
       "organization": "Maharashtra Amateur Gymnastics Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Makrand Joshi"
+      "title": "Mr. Makrand Joshi",
+      "email": "maha.gymnastics@gmail.com",
+      "additionalEmails": "msj2368@gmail.com",
+      "phone": "9422711433"
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -559,7 +697,10 @@ export const members2025 = [
       "organization": "Hockey Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Krishna Prakash"
+      "title": "Mr. Krishna Prakash",
+      "email": "krishnaprakaships@gmail.com",
+      "additionalEmails": "",
+      "phone": "7021447614"
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -571,7 +712,10 @@ export const members2025 = [
       "organization": "Hockey Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Manish S Anand"
+      "title": "Mr. Manish S Anand",
+      "email": "manishsanand@gmail.com",
+      "additionalEmails": "hockeymaharashtra@hockeyindia.org; bmanojoo7@gmail.com",
+      "phone": "9049494949 020 65215580 9822836161 8380861861"
     },
     "module": "affiliated-members",
     "sourcePage": 2
@@ -583,7 +727,10 @@ export const members2025 = [
       "organization": "Maharashtra Judo Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr.Shailesh Tilak"
+      "title": "Mr.Shailesh Tilak",
+      "email": "gs.mahajudo@gmail.com",
+      "additionalEmails": "stilak@yahoo.com",
+      "phone": "021-62234600 M- 9422029656"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -595,7 +742,10 @@ export const members2025 = [
       "organization": "Maharashtra Judo Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr Datta Aphale"
+      "title": "Mr Datta Aphale",
+      "email": "gs.mahajudo@gmail.com",
+      "additionalEmails": "aphale1dm@gmail.com",
+      "phone": "020-29809656 9423150231"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -607,7 +757,10 @@ export const members2025 = [
       "organization": "Maharashtra Kho –Kho Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Shri. Ajitdada Pawar"
+      "title": "Shri. Ajitdada Pawar",
+      "email": "maharashtrakhokhoassociation@gmail.com",
+      "additionalEmails": "",
+      "phone": "Mo. No. - 9850051222/ 8652525350"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -619,7 +772,10 @@ export const members2025 = [
       "organization": "Maharashtra Kho –Kho Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Adv. Chandrajit Jadhav"
+      "title": "Adv. Chandrajit Jadhav",
+      "email": "chandrajitjadhav@yahoo.in",
+      "additionalEmails": "",
+      "phone": "M 9422o70155 9175438711"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -631,7 +787,10 @@ export const members2025 = [
       "organization": "Maharashtra State Lawn Tennis Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Bharat N. Oza"
+      "title": "Mr. Bharat N. Oza",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "022 – 22873902 9820343405"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -643,7 +802,10 @@ export const members2025 = [
       "organization": "Maharashtra State Lawn Tennis Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sundar Iyer"
+      "title": "Mr. Sundar Iyer",
+      "email": "siyer30@gmail.com",
+      "additionalEmails": "mslta@mslta.org",
+      "phone": "9823029582"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -655,7 +817,10 @@ export const members2025 = [
       "organization": "Modern Pentathlon Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sunil Purnapatre"
+      "title": "Mr. Sunil Purnapatre",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "9822836564 Phone 022- 40056125"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -667,7 +832,10 @@ export const members2025 = [
       "organization": "Modern Pentathlon Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Vitthal Shirgaonkar"
+      "title": "Mr. Vitthal Shirgaonkar",
+      "email": "pentathalon@gmail.com",
+      "additionalEmails": "pentathlonmaharashtra@gmail.com",
+      "phone": "9967143767"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -679,7 +847,10 @@ export const members2025 = [
       "organization": "Maharashtra Amateur Netball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Satish Ingale"
+      "title": "Mr. Satish Ingale",
+      "email": "maharashtranetball25@gmail.com",
+      "additionalEmails": "",
+      "phone": "M 8208279721"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -691,7 +862,10 @@ export const members2025 = [
       "organization": "Maharashtra Amateur Netball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Ms. Shalini Ambatkar"
+      "title": "Ms. Shalini Ambatkar",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "M 9767895650"
     },
     "module": "affiliated-members",
     "sourcePage": 3
@@ -703,7 +877,10 @@ export const members2025 = [
       "organization": "Maharashtra Rifle Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Ashok Pandit"
+      "title": "Mr. Ashok Pandit",
+      "email": "ashokjpandit@gmail.com",
+      "additionalEmails": "",
+      "phone": "M 9833827282"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -715,7 +892,10 @@ export const members2025 = [
       "organization": "Maharashtra Rifle Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Ms. Sheila Kanungo"
+      "title": "Ms. Sheila Kanungo",
+      "email": "sheilakanungo@gmail.com",
+      "additionalEmails": "mrarifle@yahoo.co.in",
+      "phone": "(O) 022-26550124 (R) 022-26428260 M 9322016365"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -727,7 +907,10 @@ export const members2025 = [
       "organization": "Maharashtra Rowing Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Ms. Smita Yadav"
+      "title": "Ms. Smita Yadav",
+      "email": "maharashtrarowing@gmail.com",
+      "additionalEmails": "smita2row@gmail.com",
+      "phone": "Mo. No. - 9823087885"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -739,7 +922,10 @@ export const members2025 = [
       "organization": "Maharashtra Rowing Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sanjay R. Valvi"
+      "title": "Mr. Sanjay R. Valvi",
+      "email": "maharashtrarowing@gmail.com",
+      "additionalEmails": "",
+      "phone": "7378471950"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -751,7 +937,10 @@ export const members2025 = [
       "organization": "Rugby Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Faisal Siddiqui"
+      "title": "Mr. Faisal Siddiqui",
+      "email": "faisal@fourwaystravels.com",
+      "additionalEmails": "",
+      "phone": "F- (022) 22086910 09820031076"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -763,7 +952,10 @@ export const members2025 = [
       "organization": "Rugby Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Naseer Hussain"
+      "title": "Mr. Naseer Hussain",
+      "email": "ninoalive@gmail.com",
+      "additionalEmails": "maharashtra@rugbyindia.in",
+      "phone": "F- (022) 22053897 09820704454"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -775,7 +967,10 @@ export const members2025 = [
       "organization": "The Maharashtra Squash Rackets Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Dr. Pradeep Khandre"
+      "title": "Dr. Pradeep Khandre",
+      "email": "pradeepbkhandre@gmail.com",
+      "additionalEmails": "",
+      "phone": "R 9921590373 M 7498245032"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -787,7 +982,10 @@ export const members2025 = [
       "organization": "The Maharashtra Squash Rackets Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Dayanand Kumar"
+      "title": "Mr. Dayanand Kumar",
+      "email": "dkumarsports@yahoo.in",
+      "additionalEmails": "",
+      "phone": "R 022 28943523 M 9870413346"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -799,7 +997,10 @@ export const members2025 = [
       "organization": "Maharashtra State Table Tennis Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Pravin Lunkad"
+      "title": "Mr. Pravin Lunkad",
+      "email": "pslunkad@gmail.com",
+      "additionalEmails": "",
+      "phone": "Tel. 2336636666"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -811,7 +1012,10 @@ export const members2025 = [
       "organization": "Maharashtra State Table Tennis Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Yatin Tipnis"
+      "title": "Mr. Yatin Tipnis",
+      "email": "ytipnis_heatex@rediffmail.com",
+      "additionalEmails": "mail.mstta@gmail.com",
+      "phone": "M – 9323971868"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -823,7 +1027,10 @@ export const members2025 = [
       "organization": "Taekwondo Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sandeep Yashwant Ombase"
+      "title": "Mr. Sandeep Yashwant Ombase",
+      "email": "sandeep.ombase01@gmail.com",
+      "additionalEmails": "",
+      "phone": "9769400799"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -835,7 +1042,10 @@ export const members2025 = [
       "organization": "Taekwondo Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Amjadkhan Pathan"
+      "title": "Mr. Amjadkhan Pathan",
+      "email": "gaffarpathan15@gmail.com",
+      "additionalEmails": "",
+      "phone": "9595969566"
     },
     "module": "affiliated-members",
     "sourcePage": 4
@@ -847,7 +1057,10 @@ export const members2025 = [
       "organization": "Maharashtra Triathlon Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Rajendra Nimbalte"
+      "title": "Mr. Rajendra Nimbalte",
+      "email": "rajendranimbalte937@gmail.com",
+      "additionalEmails": "",
+      "phone": "9373925453"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -859,7 +1072,10 @@ export const members2025 = [
       "organization": "Maharashtra Triathlon Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Dayanand Kumar"
+      "title": "Mr. Dayanand Kumar",
+      "email": "dkumarsports@yahoo.in",
+      "additionalEmails": "",
+      "phone": "R 022 28943523 M 9870413346"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -871,7 +1087,10 @@ export const members2025 = [
       "organization": "Maharashtra Volleyball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Vijay Dangare"
+      "title": "Mr. Vijay Dangare",
+      "email": "mdvijaydangre@gmail.com",
+      "additionalEmails": "",
+      "phone": "9765538222 9823375111"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -883,7 +1102,10 @@ export const members2025 = [
       "organization": "Maharashtra Volleyball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Nilesh Jagtap"
+      "title": "Nilesh Jagtap",
+      "email": "nil7363@gmail.com",
+      "additionalEmails": "",
+      "phone": "8806664877"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -895,7 +1117,10 @@ export const members2025 = [
       "organization": "Maharashtra State Weightlifting Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sudhir Mhalaskar"
+      "title": "Mr. Sudhir Mhalaskar",
+      "email": "sudhirmhalaskar8@gmail.com",
+      "additionalEmails": "",
+      "phone": "9850128227"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -907,7 +1132,10 @@ export const members2025 = [
       "organization": "Maharashtra State Weightlifting Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Prashant Bendre"
+      "title": "Mr. Prashant Bendre",
+      "email": "maharashtra.weightlifting@gmail.com",
+      "additionalEmails": "",
+      "phone": "8983037077"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -919,7 +1147,10 @@ export const members2025 = [
       "organization": "Wrestling Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Ramdas Tadas"
+      "title": "Mr. Ramdas Tadas",
+      "email": "maharashtrakustigirsangh@gmai.com",
+      "additionalEmails": "",
+      "phone": "9403337744"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -931,7 +1162,10 @@ export const members2025 = [
       "organization": "Wrestling Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Yogesh Dodke"
+      "title": "Mr. Yogesh Dodke",
+      "email": "maharashtrakustigirsangh@gmai.com",
+      "additionalEmails": "",
+      "phone": "9850212825"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -943,7 +1177,10 @@ export const members2025 = [
       "organization": "All Maharashtra Wushu Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sambhaji Zende"
+      "title": "Mr. Sambhaji Zende",
+      "email": "amwa453@gmail.com",
+      "additionalEmails": "",
+      "phone": "R-022 24976565 9821033776"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -955,7 +1192,10 @@ export const members2025 = [
       "organization": "All Maharashtra Wushu Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sopan Katke"
+      "title": "Mr. Sopan Katke",
+      "email": "sopankatke@yahoo.co.in",
+      "additionalEmails": "",
+      "phone": "Fax 020 24347114 M 9422037905"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -967,7 +1207,10 @@ export const members2025 = [
       "organization": "Yachting Association of Maharashtra (YAM)",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Girish Phadinis"
+      "title": "Mr. Girish Phadinis",
+      "email": "gphadnis27@gmail.com",
+      "additionalEmails": "",
+      "phone": "98206 49939"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -979,7 +1222,10 @@ export const members2025 = [
       "organization": "Yachting Association of Maharashtra (YAM)",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Nihar Shaha"
+      "title": "Mr. Nihar Shaha",
+      "email": "yachtingmaharashtra@gmail.com",
+      "additionalEmails": "",
+      "phone": "9967143767"
     },
     "module": "affiliated-members",
     "sourcePage": 5
@@ -991,7 +1237,10 @@ export const members2025 = [
       "organization": "Maharashtra Rajya Atyapatya Mahamandal",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Babanrao Taywade"
+      "title": "Mr. Babanrao Taywade",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "M 9823314111"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1003,7 +1252,10 @@ export const members2025 = [
       "organization": "Maharashtra Rajya Atyapatya Mahamandal",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Dr. Amarkant Chakole"
+      "title": "Dr. Amarkant Chakole",
+      "email": "amarkantchakole@gmail.com",
+      "additionalEmails": "",
+      "phone": "M 9763412175"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1015,7 +1267,10 @@ export const members2025 = [
       "organization": "The Maharashtra Ball Badminton Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Dr. P. K. Patel"
+      "title": "Dr. P. K. Patel",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "Mo. 9890907083"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1027,7 +1282,10 @@ export const members2025 = [
       "organization": "The Maharashtra Ball Badminton Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Atul M. Ingle"
+      "title": "Mr. Atul M. Ingle",
+      "email": "maharashtra.b.b.asso@gmail.com",
+      "additionalEmails": "",
+      "phone": "Mo. 9270300700"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1039,7 +1297,10 @@ export const members2025 = [
       "organization": "Maharashtra Bodybuilder’s Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Mahesh Landge"
+      "title": "Mr. Mahesh Landge",
+      "email": "landge.mahesh.k@gmail.com",
+      "additionalEmails": "",
+      "phone": "M 9922609666"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1051,7 +1312,10 @@ export const members2025 = [
       "organization": "Maharashtra Bodybuilder’s Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Ajay Khanvilkar"
+      "title": "Mr. Ajay Khanvilkar",
+      "email": "saiparnsheets1@rediffmail.com",
+      "additionalEmails": "ibbf_sanjaymore@live.com",
+      "phone": "R 0240 2486434 Fax 2473548 M 9822652809"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1063,7 +1327,10 @@ export const members2025 = [
       "organization": "Maharashtra Carrom Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Jitendra Shah"
+      "title": "Mr. Jitendra Shah",
+      "email": "carrom.mca1954@gmail.com",
+      "additionalEmails": "",
+      "phone": "M (022) 24361788"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1075,7 +1342,10 @@ export const members2025 = [
       "organization": "Maharashtra Carrom Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Yatin Thakur"
+      "title": "Mr. Yatin Thakur",
+      "email": "kedararun@yahoo.in",
+      "additionalEmails": "",
+      "phone": ""
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1087,7 +1357,10 @@ export const members2025 = [
       "organization": "Kurash Association Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Ankush Nagar"
+      "title": "Mr. Ankush Nagar",
+      "email": "kurashassociationofmaharashtra@gmail.com",
+      "additionalEmails": "",
+      "phone": "9422220456"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1099,7 +1372,10 @@ export const members2025 = [
       "organization": "Kurash Association Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Shivaji Jaywant Salunkhe"
+      "title": "Mr. Shivaji Jaywant Salunkhe",
+      "email": "maharashtrakurash@gmail.com",
+      "additionalEmails": "",
+      "phone": "9881179767"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1111,7 +1387,10 @@ export const members2025 = [
       "organization": "Maharashtra Amateur Mallakhamb Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Rajendra Adhikari"
+      "title": "Mr. Rajendra Adhikari",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "09372383831"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1123,7 +1402,10 @@ export const members2025 = [
       "organization": "Maharashtra Amateur Mallakhamb Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr.Shreyas Purshottam Mhaskar"
+      "title": "Mr.Shreyas Purshottam Mhaskar",
+      "email": "shreyasmhaskar1@gmail.com",
+      "additionalEmails": "",
+      "phone": "9820041233 02224443650 24443652"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1135,7 +1417,10 @@ export const members2025 = [
       "organization": "Maharashtra State Roll Ball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Adesh Bandekar"
+      "title": "Mr. Adesh Bandekar",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "R 020 25453857"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1147,7 +1432,10 @@ export const members2025 = [
       "organization": "Maharashtra State Roll Ball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Raju Dabhade"
+      "title": "Mr. Raju Dabhade",
+      "email": "maharollball@gmail.com",
+      "additionalEmails": "",
+      "phone": "M 9423576777 020 24260941"
     },
     "module": "affiliated-members",
     "sourcePage": 6
@@ -1159,7 +1447,10 @@ export const members2025 = [
       "organization": "Maharashtra Sepak Takraw Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Vipin Kamdar"
+      "title": "Mr. Vipin Kamdar",
+      "email": "MSTASecretary2021@gmail.com",
+      "additionalEmails": "",
+      "phone": "M 9373103328"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1171,7 +1462,10 @@ export const members2025 = [
       "organization": "Maharashtra Sepak Takraw Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Yogendra Pandey"
+      "title": "Mr. Yogendra Pandey",
+      "email": "mstasecretary2021@gmail.com",
+      "additionalEmails": "",
+      "phone": "Mo. 9422110610 9049669425"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1183,7 +1477,10 @@ export const members2025 = [
       "organization": "Maharashtra State Softball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Girish Mahajan"
+      "title": "Mr. Girish Mahajan",
+      "email": "ptalvalkar@yahoo.com",
+      "additionalEmails": "",
+      "phone": "9322292525, 09422292525 9833202719"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1195,7 +1492,10 @@ export const members2025 = [
       "organization": "Maharashtra State Softball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Dr. Pradip Talvelkar"
+      "title": "Dr. Pradip Talvelkar",
+      "email": "ptalvalkar@yahoo.com",
+      "additionalEmails": "",
+      "phone": "09423487222, 09423493419"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1207,7 +1507,10 @@ export const members2025 = [
       "organization": "Soft Tennis Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sunil Purnapatre"
+      "title": "Mr. Sunil Purnapatre",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "9822836564"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1219,7 +1522,10 @@ export const members2025 = [
       "organization": "Soft Tennis Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Ravindra Sonawane"
+      "title": "Mr. Ravindra Sonawane",
+      "email": "softtennismaharashtra@gmail.com",
+      "additionalEmails": "",
+      "phone": "98207971539 9967487262"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1231,7 +1537,10 @@ export const members2025 = [
       "organization": "Maharashtra Tenni-Koit Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Mohan Joshi"
+      "title": "Mr. Mohan Joshi",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "9822096720"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1243,7 +1552,10 @@ export const members2025 = [
       "organization": "Maharashtra Tenni-Koit Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Anil Varpe"
+      "title": "Mr. Anil Varpe",
+      "email": "anilvarpe24@gmail.com",
+      "additionalEmails": "",
+      "phone": "M-9960677050 M-7875767494"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1255,7 +1567,10 @@ export const members2025 = [
       "organization": "All Maharashtra Thang-Ta Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Mukundrao K. Duldhar"
+      "title": "Mr. Mukundrao K. Duldhar",
+      "email": "",
+      "additionalEmails": "",
+      "phone": ""
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1267,7 +1582,10 @@ export const members2025 = [
       "organization": "All Maharashtra Thang-Ta Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Mahavir M. Duldhar"
+      "title": "Mr. Mahavir M. Duldhar",
+      "email": "sec.amtta@rediffmail.com",
+      "additionalEmails": "",
+      "phone": "9325655152 9372793587"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1279,7 +1597,10 @@ export const members2025 = [
       "organization": "Maharashtra Tug of War Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Ms Madhavi Patil"
+      "title": "Ms Madhavi Patil",
+      "email": "madhavi0904@yahoo.com",
+      "additionalEmails": "",
+      "phone": "M"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1291,7 +1612,10 @@ export const members2025 = [
       "organization": "Maharashtra Tug of War Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. J.E.Gupile"
+      "title": "Mr. J.E.Gupile",
+      "email": "janardhangupile@gmail.com",
+      "additionalEmails": "",
+      "phone": "9423615113"
     },
     "module": "affiliated-members",
     "sourcePage": 7
@@ -1303,7 +1627,10 @@ export const members2025 = [
       "organization": "Maharashtra Baseball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Jitendra Awhad"
+      "title": "Mr. Jitendra Awhad",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "022 25346969"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1315,7 +1642,10 @@ export const members2025 = [
       "organization": "Maharashtra Baseball Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Rajendra Ikhankar"
+      "title": "Mr. Rajendra Ikhankar",
+      "email": "rikhankar@yahoo.com",
+      "additionalEmails": "",
+      "phone": "022 24223017 09987513745"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1327,7 +1657,10 @@ export const members2025 = [
       "organization": "Maharashtra Karate Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sandeep Salvi"
+      "title": "Mr. Sandeep Salvi",
+      "email": "",
+      "additionalEmails": "",
+      "phone": ""
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1339,7 +1672,10 @@ export const members2025 = [
       "organization": "Maharashtra Karate Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Jogy Abraham"
+      "title": "Mr. Jogy Abraham",
+      "email": "maharashtrakarateja@gmail.com",
+      "additionalEmails": "",
+      "phone": "8779547295/ 9821084387"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1351,7 +1687,10 @@ export const members2025 = [
       "organization": "Maharashtra Yogasana Sports Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sanjay Malpani"
+      "title": "Mr. Sanjay Malpani",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "Mr. 9850811271"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1363,7 +1702,10 @@ export const members2025 = [
       "organization": "Maharashtra Yogasana Sports Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Rajesh Pawar"
+      "title": "Mr. Rajesh Pawar",
+      "email": "rajeshramakantp@gmail.com",
+      "additionalEmails": "",
+      "phone": "Mr. 8446901363"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1375,7 +1717,10 @@ export const members2025 = [
       "organization": "Kickboxing Sports Association Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Nilesh Shelar"
+      "title": "Mr. Nilesh Shelar",
+      "email": "nileshshelar87@gmail.com",
+      "additionalEmails": "",
+      "phone": "Mr. 9834559525"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1387,7 +1732,10 @@ export const members2025 = [
       "organization": "Kickboxing Sports Association Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Dheeraj Waghmare"
+      "title": "Mr. Dheeraj Waghmare",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "M 7972838192"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1399,7 +1747,10 @@ export const members2025 = [
       "organization": "Maharashtrian Dragon Boat and traditions water sports Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Tom Josehp"
+      "title": "Mr. Tom Josehp",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "M 9922376582"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1411,7 +1762,10 @@ export const members2025 = [
       "organization": "Maharashtrian Dragon Boat and traditions water sports Association",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Dinesh Munde"
+      "title": "Mr. Dinesh Munde",
+      "email": "mhdragonboat@gmail.com",
+      "additionalEmails": "",
+      "phone": "M 9527544444"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1423,7 +1777,10 @@ export const members2025 = [
       "organization": "American Football Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sunil Purnapatre"
+      "title": "Mr. Sunil Purnapatre",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "9822836564"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1435,7 +1792,10 @@ export const members2025 = [
       "organization": "American Football Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sandip Choudhary"
+      "title": "Mr. Sandip Choudhary",
+      "email": "afam.maharashtra@gmail.com",
+      "additionalEmails": "",
+      "phone": "7888007885/ 9673200513"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1447,7 +1807,10 @@ export const members2025 = [
       "organization": "Teqball Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Bipin Suryawanshi"
+      "title": "Mr. Bipin Suryawanshi",
+      "email": "",
+      "additionalEmails": "",
+      "phone": "M 9867505648"
     },
     "module": "affiliated-members",
     "sourcePage": 8
@@ -1459,7 +1822,10 @@ export const members2025 = [
       "organization": "Teqball Association of Maharashtra",
       "status": "published",
       "tenure": "2025–2029",
-      "title": "Mr. Sathyavan Jadhav"
+      "title": "Mr. Sathyavan Jadhav",
+      "email": "mahateqball@gmail.com",
+      "additionalEmails": "",
+      "phone": "M 9819424195"
     },
     "module": "affiliated-members",
     "sourcePage": 8

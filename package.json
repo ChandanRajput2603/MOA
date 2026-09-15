@@ -12,7 +12,8 @@
     "test": "npm run test -w server",
     "start": "npm run start -w server",
     "seed": "node --import tsx server/src/seed.ts",
-    "import:members": "node --import tsx server/src/import-members.ts"
+    "import:members": "node --import tsx server/src/import-members.ts",
+    "update:members": "node --import tsx server/src/update-members.ts"
   },
   "devDependencies": {
     "concurrently": "^9.2.0",

@@ -15,3 +15,19 @@ test("existing president is matched despite different honorific",()=>{
  assert.equal(memberIdentity("committee",{title:"Shri. Murlidhar Mohol"}),memberIdentity("committee",{title:"Mr. Murlidhar Mohol"}));
  assert.notEqual(memberIdentity("affiliated-members",{title:"Mr. Example Name",organization:"One Association"}),memberIdentity("affiliated-members",{title:"Mr. Example Name",organization:"Two Association"}));
 });
+test("PDF row order and wrapped contact details survive schema parsing",()=>{
+ const council=members2025.filter(r=>r.module==="committee");
+ assert.deepEqual(council.slice(0,5).map(r=>r.data.title),["Mr. Murlidhar Mohol","Mr. Sanjay Shete","Mr. Arun Lakhani","Mr. Sandeep Joshi","Mr. Shailesh Tilak"]);
+ assert.deepEqual(council.map(r=>r.data.order),Array.from({length:28},(_,i)=>i+1));
+ for(const r of members2025) {
+  const parsed=schemas[r.module].parse(r.data);
+  assert.equal(parsed.phone,r.data.phone);
+  assert.equal(parsed.additionalEmails,r.data.additionalEmails);
+  for(const email of r.data.additionalEmails.split("; ").filter(Boolean)) {
+   schemas[r.module].parse({...r.data,email});
+  }
+ }
+ const hockey=members2025.find(r=>r.data.title==="Mr. Manish S Anand")!;
+ assert.equal(hockey.data.email,"manishsanand@gmail.com");
+ assert.equal(hockey.data.additionalEmails,"hockeymaharashtra@hockeyindia.org; bmanojoo7@gmail.com");
+});
