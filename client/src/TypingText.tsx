@@ -11,39 +11,46 @@ export default function TypingText({ text, delay = 300 }: { text: string; delay?
     const reduced = () => media.matches || document.documentElement.dataset.motion === "reduced";
     if (reduced() || !("IntersectionObserver" in window)) { setCount(text.length); return; }
     let stopped = false;
-    let started = false;
+    let visible = false;
     let timer: number | undefined;
-    setCount(0);
-    const observer = new IntersectionObserver(entries => {
-      if (started || stopped || !entries.some(e => e.isIntersecting)) return;
-      started = true;
-      observer.disconnect();
-      let next = 0;
-      const tick = () => {
-        if (stopped) return;
-        next += 1;
-        setCount(next);
-        if (next < text.length) timer = window.setTimeout(tick, 65);
-      };
+    let next = 0;
+    const clear = () => window.clearTimeout(timer);
+    const allowed = () => !stopped && visible && !document.hidden && !reduced();
+    const tick = () => {
+      if (!allowed()) return;
+      next += 1;
+      setCount(next);
+      if (next < text.length) timer = window.setTimeout(tick, 65);
+      else timer = window.setTimeout(() => {
+        if (!allowed()) return;
+        next = 0;
+        setCount(0);
+        timer = window.setTimeout(tick, 350);
+      }, 3500);
+    };
+    const restart = () => {
+      clear();
+      if (!allowed()) { setCount(text.length); return; }
+      next = 0;
+      setCount(0);
       timer = window.setTimeout(tick, delay);
+    };
+    const observer = new IntersectionObserver(entries => {
+      visible = entries.some(e => e.isIntersecting);
+      restart();
     }, { threshold: 0.15 });
     observer.observe(element);
-    const showAll = () => {
-      if (!reduced()) return;
-      stopped = true;
-      window.clearTimeout(timer);
-      observer.disconnect();
-      setCount(text.length);
-    };
-    const preferences = new MutationObserver(showAll);
+    const preferences = new MutationObserver(restart);
     preferences.observe(document.documentElement, { attributes: true, attributeFilter: ["data-motion"] });
-    media.addEventListener("change", showAll);
+    media.addEventListener("change", restart);
+    document.addEventListener("visibilitychange", restart);
     return () => {
       stopped = true;
-      window.clearTimeout(timer);
+      clear();
       observer.disconnect();
       preferences.disconnect();
-      media.removeEventListener("change", showAll);
+      media.removeEventListener("change", restart);
+      document.removeEventListener("visibilitychange", restart);
     };
   }, [text, delay]);
   let offset = 0;
