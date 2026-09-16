@@ -171,3 +171,19 @@
 }
 [data-motion=reduced] .ch-sport-visual>img,[data-motion=reduced] .ch-sport-visual .ch-track-art { animation:none!important; }
 [data-motion=reduced] .ch-sport-shimmer,[data-motion=reduced] .ch-sport-edge:after { display:none!important; }
+
+/* A larger vertical leadership list, with portraits beside each caption. */
+.cinematic-home .ch-leadership { width:min(100%,480px); min-width:0; }
+.cinematic-home .ch-leadership-label { font-size:12px; margin-bottom:20px; }
+.cinematic-home .ch-leadership-pair { grid-template-columns:minmax(0,1fr); gap:22px; }
+.cinematic-home .ch-leader { flex-direction:row; align-items:center; gap:20px; }
+.cinematic-home .ch-leader-photo { width:120px; height:144px; }
+.cinematic-home .ch-leader-role { font-size:11px; }
+.cinematic-home .ch-leader-caption strong { font-size:19px; }
+.cinematic-home .ch-leader-link { font-size:12px; }
+@media(max-width:600px) {
+  .cinematic-home .ch-leadership { width:100%; }
+  .cinematic-home .ch-leader { gap:16px; }
+  .cinematic-home .ch-leader-photo { width:104px; height:126px; }
+  .cinematic-home .ch-leader-caption strong { font-size:17px; }
+}
