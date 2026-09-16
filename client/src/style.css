@@ -1796,3 +1796,43 @@ dialog::backdrop {
   object-position: center top;
   background: var(--raw-surface);
 }
+
+/* Glass navigation with an opaque fallback for unsupported browsers. */
+.public-header {
+  --nav-glass:rgba(250,252,255,.76);
+  --nav-glass-menu:rgba(250,252,255,.94);
+  --nav-glass-edge:rgba(255,255,255,.65);
+  --nav-glass-highlight:rgba(255,255,255,.55);
+  background:var(--raw-bg);
+  border-bottom:1px solid var(--raw-border);
+  box-shadow:inset 0 1px 0 var(--nav-glass-edge),0 8px 28px #1023330c;
+}
+[data-theme=dark] .public-header {
+  --nav-glass:rgba(12,20,30,.78);
+  --nav-glass-menu:rgba(16,25,37,.96);
+  --nav-glass-edge:rgba(255,255,255,.13);
+  --nav-glass-highlight:rgba(255,255,255,.055);
+}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  .public-header {
+    background:linear-gradient(125deg,var(--nav-glass-highlight),transparent 52%),var(--nav-glass);
+    -webkit-backdrop-filter:blur(22px) saturate(155%);
+    backdrop-filter:blur(22px) saturate(155%);
+    border-bottom-color:var(--nav-glass-edge);
+  }
+  .public-header .nav-disclosure-links,.public-header .dropdown {
+    background:var(--nav-glass-menu);
+    border-color:var(--nav-glass-edge);
+    box-shadow:inset 0 1px 0 var(--nav-glass-edge),0 14px 40px #07121c20;
+  }
+}
+@media(prefers-reduced-transparency:reduce) {
+  .public-header,.public-header .nav-disclosure-links,.public-header .dropdown {
+    background:var(--raw-bg); backdrop-filter:none; -webkit-backdrop-filter:none;
+  }
+}
+@media(forced-colors:active) {
+  .public-header,.public-header .nav-disclosure-links,.public-header .dropdown {
+    background:Canvas; border-color:CanvasText; backdrop-filter:none; -webkit-backdrop-filter:none;
+  }
+}

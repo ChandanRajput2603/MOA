@@ -160,8 +160,6 @@
 .cinematic-home .ch-sport-caption a svg { transition:transform .25s ease; }
 .cinematic-home .ch-sport-caption a:hover svg { transform:translate(3px,-3px); }
 .ch-sport-visual .ch-track-art { animation:ch-sport-track 16s ease-in-out infinite alternate; }
-.cinematic-home .ch-sport-motion-toggle { position:absolute; top:16px; right:16px; z-index:4; border:1px solid #ffffff50; border-radius:100px; padding:8px 12px; background:#102333ed; color:#fff; font-size:11px; line-height:1.3; }
-.ch-sport-motion-toggle:focus-visible { outline:3px solid var(--ch-accent); outline-offset:4px; }
 .ch-sport-visual[data-ambient=paused]>img,.ch-sport-visual[data-ambient=paused] .ch-sport-shimmer,.ch-sport-visual[data-ambient=paused] .ch-sport-edge:after,.ch-sport-visual[data-ambient=paused] .ch-track-art { animation-play-state:paused; }
 @keyframes ch-sport-breathe { from { transform:scale(1); } to { transform:scale(1.035); } }
 @keyframes ch-sport-light { 0%,15% { transform:translateX(-65%); } 70%,100% { transform:translateX(65%); } }
@@ -169,7 +167,7 @@
 @keyframes ch-sport-track { from { transform:rotate(-30deg) scale(1); } to { transform:rotate(-24deg) scale(1.03); } }
 @media(prefers-reduced-motion:reduce) {
  .cinematic-home .ch-sport-visual>img,.ch-sport-visual .ch-track-art { animation:none!important; }
- .ch-sport-shimmer,.ch-sport-edge:after,.ch-sport-motion-toggle { display:none!important; }
+ .ch-sport-shimmer,.ch-sport-edge:after { display:none!important; }
 }
 [data-motion=reduced] .ch-sport-visual>img,[data-motion=reduced] .ch-sport-visual .ch-track-art { animation:none!important; }
-[data-motion=reduced] .ch-sport-shimmer,[data-motion=reduced] .ch-sport-edge:after,[data-motion=reduced] .ch-sport-motion-toggle { display:none!important; }
+[data-motion=reduced] .ch-sport-shimmer,[data-motion=reduced] .ch-sport-edge:after { display:none!important; }
