@@ -219,10 +219,14 @@
     grid-template-rows:auto auto 1fr;
   }
   .cinematic-home .ch-hero-support {
-    align-self:end;
+    align-self:start;
+    margin-top:22px;
   }
 }
 @media(min-width:901px) and (min-height:760px) {
   .cinematic-home .ch-hero h1 { line-height:1.08; }
   .cinematic-home .ch-hero-support .ch-intro-copy { line-height:1.75; margin-bottom:22px; }
 }
+
+/* Equal gaps around the hero introduction, independent of free hero space. */
+.cinematic-home .ch-hero-support .ch-intro-copy { margin-top:0; margin-bottom:22px; }
