@@ -187,3 +187,27 @@
   .cinematic-home .ch-leader-photo { width:104px; height:126px; }
   .cinematic-home .ch-leader-caption strong { font-size:17px; }
 }
+
+/* Fit the headline and vertical leadership list alongside one another. */
+.cinematic-home .ch-hero-copy { padding-bottom:28px; }
+.cinematic-home .ch-hero h1 { font-size:clamp(38px,6vw,86px); }
+.cinematic-home .ch-hero-copy>.ch-leadership { margin-top:28px; }
+@media(min-width:901px) {
+  .cinematic-home .ch-hero-copy {
+    display:grid;
+    grid-template-columns:minmax(0,1.55fr) minmax(300px,1fr);
+    column-gap:36px;
+    align-items:start;
+  }
+  .cinematic-home .ch-hero-copy>.ch-kicker { grid-column:1; grid-row:1; margin-bottom:20px; }
+  .cinematic-home .ch-hero h1 { grid-column:1; grid-row:2; font-size:clamp(40px,5.3vw,80px); min-width:0; }
+  .cinematic-home .ch-hero-support { grid-column:1; grid-row:3; margin-top:22px; }
+  .cinematic-home .ch-hero-copy>.ch-leadership {
+    grid-column:2; grid-row:1 / span 3; align-self:center; width:100%; margin-top:0; padding-left:24px;
+  }
+}
+@media(max-width:900px) {
+  .cinematic-home .ch-hero-copy>.ch-leadership {
+    width:100%; padding:22px 0 0; border-left:0; border-top:1px solid var(--ch-line);
+  }
+}
