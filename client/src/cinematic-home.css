@@ -211,3 +211,18 @@
     width:100%; padding:22px 0 0; border-left:0; border-top:1px solid var(--ch-line);
   }
 }
+
+/* Use the existing desktop hero space; leave the scroll cue and hero height unchanged. */
+@media(min-width:901px) {
+  .cinematic-home .ch-hero-copy {
+    flex:1 0 auto;
+    grid-template-rows:auto auto 1fr;
+  }
+  .cinematic-home .ch-hero-support {
+    align-self:end;
+  }
+}
+@media(min-width:901px) and (min-height:760px) {
+  .cinematic-home .ch-hero h1 { line-height:1.08; }
+  .cinematic-home .ch-hero-support .ch-intro-copy { line-height:1.75; margin-bottom:22px; }
+}
