@@ -220,7 +220,7 @@ label.check {
 .public-header nav {
   display: flex;
   gap: 25px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .public-header nav a.active {
   color: var(--raw-accent);
@@ -1598,7 +1598,7 @@ dialog::backdrop {
   align-items: center;
   gap: 6px;
   padding: 8px 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 .nav-disclosure-trigger.active {
   color: var(--raw-accent);
@@ -1625,7 +1625,7 @@ dialog::backdrop {
   display: block;
   padding: 10px 12px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .public-header .nav-disclosure-links a:hover,
 .public-header .nav-disclosure-links a:focus-visible {
